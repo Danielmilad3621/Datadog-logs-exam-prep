@@ -1,0 +1,6458 @@
+[
+  {
+    "id": 1,
+    "prompt": "Which features in Datadog help in detecting anomalies in log data ? (Choose 3 answers)",
+    "options": [
+      {
+        "key": "A",
+        "text": "Anomaly detection monitors"
+      },
+      {
+        "key": "B",
+        "text": "Log processing pipelines"
+      },
+      {
+        "key": "C",
+        "text": "Alert notifications"
+      },
+      {
+        "key": "D",
+        "text": "Log Explorer"
+      },
+      {
+        "key": "E",
+        "text": "Dashboards"
+      }
+    ],
+    "answers": [
+      "A",
+      "C",
+      "D"
+    ],
+    "type": "multi",
+    "domain": "Log Utilization",
+    "topic": "Monitors & Alerting",
+    "topicCode": "LU1",
+    "sourcePage": 2,
+    "flags": []
+  },
+  {
+    "id": 2,
+    "prompt": "How can you enhance the security of log data in Datadog ?",
+    "options": [
+      {
+        "key": "A",
+        "text": "By updating software drivers"
+      },
+      {
+        "key": "B",
+        "text": "By changing desktop wallpaper"
+      },
+      {
+        "key": "C",
+        "text": "By disabling log collection"
+      },
+      {
+        "key": "D",
+        "text": "By using data encryption"
+      }
+    ],
+    "answers": [
+      "D"
+    ],
+    "type": "single",
+    "domain": "Additional Topics",
+    "topic": "Security, RBAC & Audit Trail",
+    "topicCode": "X2",
+    "sourcePage": 2,
+    "flags": []
+  },
+  {
+    "id": 3,
+    "prompt": "Which integrations are used for shipping logs to Datadog from third-party services ? (Choose 4 answers)",
+    "options": [
+      {
+        "key": "A",
+        "text": "Heroku Logplex"
+      },
+      {
+        "key": "B",
+        "text": "Google Cloud Logging"
+      },
+      {
+        "key": "C",
+        "text": "Elasticsearch"
+      },
+      {
+        "key": "D",
+        "text": "AWS CloudWatch Logs"
+      },
+      {
+        "key": "E",
+        "text": "Azure Monitor Logs"
+      }
+    ],
+    "answers": [
+      "A",
+      "B",
+      "D",
+      "E"
+    ],
+    "type": "multi",
+    "domain": "Log Collection",
+    "topic": "Enabling Log Collection",
+    "topicCode": "LC1",
+    "sourcePage": 2,
+    "flags": []
+  },
+  {
+    "id": 4,
+    "prompt": "What are some common log sources for Datadog ? (Choose 4 answers)",
+    "options": [
+      {
+        "key": "A",
+        "text": "Databases"
+      },
+      {
+        "key": "B",
+        "text": "Applications"
+      },
+      {
+        "key": "C",
+        "text": "Servers"
+      },
+      {
+        "key": "D",
+        "text": "User desktops"
+      },
+      {
+        "key": "E",
+        "text": "Network devices"
+      }
+    ],
+    "answers": [
+      "A",
+      "B",
+      "C",
+      "E"
+    ],
+    "type": "multi",
+    "domain": "Logging Fundamentals",
+    "topic": "Log Emission",
+    "topicCode": "LF3",
+    "sourcePage": 2,
+    "flags": []
+  },
+  {
+    "id": 5,
+    "prompt": "You cannot create dashboards that include both log data and metrics in Datadog.",
+    "options": [
+      {
+        "key": "A",
+        "text": "False"
+      },
+      {
+        "key": "B",
+        "text": "True"
+      }
+    ],
+    "answers": [
+      "A"
+    ],
+    "type": "truefalse",
+    "domain": "Log Analysis",
+    "topic": "Visualizing",
+    "topicCode": "LA3",
+    "sourcePage": 3,
+    "flags": []
+  },
+  {
+    "id": 6,
+    "prompt": "How can you optimize log collection for cloud environments in Datadog ? (Choose 3 answers)",
+    "options": [
+      {
+        "key": "A",
+        "text": "Increase log retention duration"
+      },
+      {
+        "key": "B",
+        "text": "Use cloud-specific log integrations"
+      },
+      {
+        "key": "C",
+        "text": "Implement log filtering at the source"
+      },
+      {
+        "key": "D",
+        "text": "Compress log data before sending"
+      },
+      {
+        "key": "E",
+        "text": "Deploy additional log collectors"
+      }
+    ],
+    "answers": [
+      "B",
+      "C",
+      "E"
+    ],
+    "type": "multi",
+    "domain": "Log Collection",
+    "topic": "Enabling Log Collection",
+    "topicCode": "LC1",
+    "sourcePage": 3,
+    "flags": []
+  },
+  {
+    "id": 7,
+    "prompt": "What is the benefit of using log archives in Datadog ?",
+    "options": [
+      {
+        "key": "A",
+        "text": "To play multimedia files"
+      },
+      {
+        "key": "B",
+        "text": "To change desktop wallpaper"
+      },
+      {
+        "key": "C",
+        "text": "To ensure compliance with data retention policie"
+      },
+      {
+        "key": "D",
+        "text": "To reduce disk space usage"
+      }
+    ],
+    "answers": [
+      "C"
+    ],
+    "type": "single",
+    "domain": "Additional Topics",
+    "topic": "Retention, Archives & Rehydration",
+    "topicCode": "X1",
+    "sourcePage": 3,
+    "flags": []
+  },
+  {
+    "id": 8,
+    "prompt": "You can set up custom parsing rules to extract specific fields from your log data in Datadog.",
+    "options": [
+      {
+        "key": "A",
+        "text": "True"
+      },
+      {
+        "key": "B",
+        "text": "False"
+      }
+    ],
+    "answers": [
+      "A"
+    ],
+    "type": "truefalse",
+    "domain": "Log Collection",
+    "topic": "Processors & Pipelines",
+    "topicCode": "LC3",
+    "sourcePage": 3,
+    "flags": []
+  },
+  {
+    "id": 9,
+    "prompt": "Which protocol is commonly used to send logs from a remote server to Datadog ?",
+    "options": [
+      {
+        "key": "A",
+        "text": "IMAP"
+      },
+      {
+        "key": "B",
+        "text": "FTP"
+      },
+      {
+        "key": "C",
+        "text": "HTTP"
+      },
+      {
+        "key": "D",
+        "text": "Syslog"
+      }
+    ],
+    "answers": [
+      "D"
+    ],
+    "type": "single",
+    "domain": "Logging Fundamentals",
+    "topic": "Log Emission",
+    "topicCode": "LF3",
+    "sourcePage": 3,
+    "flags": []
+  },
+  {
+    "id": 10,
+    "prompt": "The Datadog Agent must be manually installed on each server to collect logs.",
+    "options": [
+      {
+        "key": "A",
+        "text": "False"
+      },
+      {
+        "key": "B",
+        "text": "True"
+      }
+    ],
+    "answers": [
+      "A"
+    ],
+    "type": "truefalse",
+    "domain": "Log Collection",
+    "topic": "Enabling Log Collection",
+    "topicCode": "LC1",
+    "sourcePage": 4,
+    "flags": []
+  },
+  {
+    "id": 11,
+    "prompt": "What is the primary purpose of a log pipeline in Datadog ?",
+    "options": [
+      {
+        "key": "A",
+        "text": "To transform and enrich log data"
+      },
+      {
+        "key": "B",
+        "text": "To update software"
+      },
+      {
+        "key": "C",
+        "text": "To change network settings"
+      },
+      {
+        "key": "D",
+        "text": "To manage user access"
+      }
+    ],
+    "answers": [
+      "A"
+    ],
+    "type": "single",
+    "domain": "Log Collection",
+    "topic": "Processors & Pipelines",
+    "topicCode": "LC3",
+    "sourcePage": 4,
+    "flags": []
+  },
+  {
+    "id": 12,
+    "prompt": "What are best practices for managing log data in Datadog ? (Choose 3 answers)",
+    "options": [
+      {
+        "key": "A",
+        "text": "Implement log retention policies"
+      },
+      {
+        "key": "B",
+        "text": "Regularly review and update log processing rules"
+      },
+      {
+        "key": "C",
+        "text": "Use encryption for sensitive log data"
+      },
+      {
+        "key": "D",
+        "text": "Share log access with all users"
+      },
+      {
+        "key": "E",
+        "text": "Avoid using structured logging"
+      }
+    ],
+    "answers": [
+      "A",
+      "B",
+      "C"
+    ],
+    "type": "multi",
+    "domain": "Logging Fundamentals",
+    "topic": "Logging Systems – Rationale & Justification",
+    "topicCode": "LF1",
+    "sourcePage": 4,
+    "flags": []
+  },
+  {
+    "id": 13,
+    "prompt": "Which scripting language is used to define log processing rules in Datadog ?",
+    "options": [
+      {
+        "key": "A",
+        "text": "SQL"
+      },
+      {
+        "key": "B",
+        "text": "Python"
+      },
+      {
+        "key": "C",
+        "text": "Perl"
+      },
+      {
+        "key": "D",
+        "text": "Grok"
+      }
+    ],
+    "answers": [
+      "D"
+    ],
+    "type": "single",
+    "domain": "Log Collection",
+    "topic": "Processors & Pipelines",
+    "topicCode": "LC3",
+    "sourcePage": 4,
+    "flags": []
+  },
+  {
+    "id": 14,
+    "prompt": "Datadog supports the use of Grok patterns for parsing unstructured log data.",
+    "options": [
+      {
+        "key": "A",
+        "text": "True"
+      },
+      {
+        "key": "B",
+        "text": "False"
+      }
+    ],
+    "answers": [
+      "A"
+    ],
+    "type": "truefalse",
+    "domain": "Log Collection",
+    "topic": "Processors & Pipelines",
+    "topicCode": "LC3",
+    "sourcePage": 5,
+    "flags": []
+  },
+  {
+    "id": 15,
+    "prompt": "Datadog provides out-of-the-box integrations with various cloud providers for log collection.",
+    "options": [
+      {
+        "key": "A",
+        "text": "False"
+      },
+      {
+        "key": "B",
+        "text": "True"
+      }
+    ],
+    "answers": [
+      "B"
+    ],
+    "type": "truefalse",
+    "domain": "Log Collection",
+    "topic": "Enabling Log Collection",
+    "topicCode": "LC1",
+    "sourcePage": 5,
+    "flags": []
+  },
+  {
+    "id": 16,
+    "prompt": "What is the purpose of role-based access control (RBAC) in Datadog ?",
+    "options": [
+      {
+        "key": "A",
+        "text": "To configure network settings"
+      },
+      {
+        "key": "B",
+        "text": "To manage email servers"
+      },
+      {
+        "key": "C",
+        "text": "To play multimedia files"
+      },
+      {
+        "key": "D",
+        "text": "To control access to logs and other resources"
+      }
+    ],
+    "answers": [
+      "D"
+    ],
+    "type": "single",
+    "domain": "Additional Topics",
+    "topic": "Security, RBAC & Audit Trail",
+    "topicCode": "X2",
+    "sourcePage": 5,
+    "flags": []
+  },
+  {
+    "id": 17,
+    "prompt": "Which are common issues faced during log collection and processing in Datadog ? (Choose 3 answers)",
+    "options": [
+      {
+        "key": "A",
+        "text": "Processor overload due to high log volume"
+      },
+      {
+        "key": "B",
+        "text": "Log data encryption failures"
+      },
+      {
+        "key": "C",
+        "text": "Misconfigured log sources"
+      },
+      {
+        "key": "D",
+        "text": "Network connectivity issues"
+      },
+      {
+        "key": "E",
+        "text": "Insufficient disk space"
+      }
+    ],
+    "answers": [
+      "A",
+      "C",
+      "D"
+    ],
+    "type": "multi",
+    "domain": "Log Troubleshooting",
+    "topic": "Ingestion Issues",
+    "topicCode": "LT1",
+    "sourcePage": 5,
+    "flags": []
+  },
+  {
+    "id": 18,
+    "prompt": "Log processing pipelines in Datadog can be used to drop unnecessary logs before they are indexed.",
+    "options": [
+      {
+        "key": "A",
+        "text": "False"
+      },
+      {
+        "key": "B",
+        "text": "True"
+      }
+    ],
+    "answers": [
+      "B"
+    ],
+    "type": "truefalse",
+    "domain": "Log Collection",
+    "topic": "Log Filtering & Obfuscation",
+    "topicCode": "LC2",
+    "sourcePage": 5,
+    "flags": []
+  },
+  {
+    "id": 19,
+    "prompt": "Which log formats are supported by Datadog ? (Choose 4 answers)",
+    "options": [
+      {
+        "key": "A",
+        "text": "PDF"
+      },
+      {
+        "key": "B",
+        "text": "JSON"
+      },
+      {
+        "key": "C",
+        "text": "Plaintext"
+      },
+      {
+        "key": "D",
+        "text": "XML"
+      },
+      {
+        "key": "E",
+        "text": "CSV"
+      }
+    ],
+    "answers": [
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "type": "multi",
+    "domain": "Logging Fundamentals",
+    "topic": "Logging Formats",
+    "topicCode": "LF2",
+    "sourcePage": 6,
+    "flags": []
+  },
+  {
+    "id": 20,
+    "prompt": "Log-based monitors can trigger alerts when a specific pattern is detected in the log data.",
+    "options": [
+      {
+        "key": "A",
+        "text": "True"
+      },
+      {
+        "key": "B",
+        "text": "False"
+      }
+    ],
+    "answers": [
+      "A"
+    ],
+    "type": "truefalse",
+    "domain": "Log Utilization",
+    "topic": "Monitors & Alerting",
+    "topicCode": "LU1",
+    "sourcePage": 6,
+    "flags": []
+  },
+  {
+    "id": 21,
+    "prompt": "How can you improve log data analysis in Datadog ? (Choose 3 answers)",
+    "options": [
+      {
+        "key": "A",
+        "text": "Regularly update log parsing rules"
+      },
+      {
+        "key": "B",
+        "text": "Use structured logging"
+      },
+      {
+        "key": "C",
+        "text": "Monitor log ingestion errors"
+      },
+      {
+        "key": "D",
+        "text": "Share logs via email"
+      },
+      {
+        "key": "E",
+        "text": "Encrypt all log data"
+      }
+    ],
+    "answers": [
+      "A",
+      "B",
+      "C"
+    ],
+    "type": "multi",
+    "domain": "Log Collection",
+    "topic": "Processors & Pipelines",
+    "topicCode": "LC3",
+    "sourcePage": 6,
+    "flags": []
+  },
+  {
+    "id": 22,
+    "prompt": "What are the advantages of using log facets in Datadog ? (Choose 3 answers)",
+    "options": [
+      {
+        "key": "A",
+        "text": "Enables log aggregation by attributes"
+      },
+      {
+        "key": "B",
+        "text": "Reduces log storage costs"
+      },
+      {
+        "key": "C",
+        "text": "Enhances log searchability"
+      },
+      {
+        "key": "D",
+        "text": "Facilitates the creation of log-based monitors"
+      },
+      {
+        "key": "E",
+        "text": "Simplifies user access control"
+      }
+    ],
+    "answers": [
+      "A",
+      "C",
+      "D"
+    ],
+    "type": "multi",
+    "domain": "Log Analysis",
+    "topic": "Aggregations",
+    "topicCode": "LA2",
+    "sourcePage": 6,
+    "flags": []
+  },
+  {
+    "id": 23,
+    "prompt": "What type of data can you extract using Grok patterns ?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Multimedia files"
+      },
+      {
+        "key": "B",
+        "text": "Image files"
+      },
+      {
+        "key": "C",
+        "text": "Structured data from unstructured log entries"
+      },
+      {
+        "key": "D",
+        "text": "Binary data"
+      }
+    ],
+    "answers": [
+      "C"
+    ],
+    "type": "single",
+    "domain": "Log Collection",
+    "topic": "Processors & Pipelines",
+    "topicCode": "LC3",
+    "sourcePage": 7,
+    "flags": []
+  },
+  {
+    "id": 24,
+    "prompt": "Datadog does not offer any features for archiving logs.",
+    "options": [
+      {
+        "key": "A",
+        "text": "True"
+      },
+      {
+        "key": "B",
+        "text": "False"
+      }
+    ],
+    "answers": [
+      "B"
+    ],
+    "type": "truefalse",
+    "domain": "Additional Topics",
+    "topic": "Retention, Archives & Rehydration",
+    "topicCode": "X1",
+    "sourcePage": 7,
+    "flags": []
+  },
+  {
+    "id": 25,
+    "prompt": "Datadog can only collect logs from Linux-based systems.",
+    "options": [
+      {
+        "key": "A",
+        "text": "True"
+      },
+      {
+        "key": "B",
+        "text": "False"
+      }
+    ],
+    "answers": [
+      "B"
+    ],
+    "type": "truefalse",
+    "domain": "Log Collection",
+    "topic": "Enabling Log Collection",
+    "topicCode": "LC1",
+    "sourcePage": 7,
+    "flags": []
+  },
+  {
+    "id": 26,
+    "prompt": "Datadog's Log Management only supports JSON log format.",
+    "options": [
+      {
+        "key": "A",
+        "text": "False"
+      },
+      {
+        "key": "B",
+        "text": "True"
+      }
+    ],
+    "answers": [
+      "A"
+    ],
+    "type": "truefalse",
+    "domain": "Logging Fundamentals",
+    "topic": "Logging Formats",
+    "topicCode": "LF2",
+    "sourcePage": 7,
+    "flags": []
+  },
+  {
+    "id": 27,
+    "prompt": "What is a common use case for log-based metrics in Datadog ?",
+    "options": [
+      {
+        "key": "A",
+        "text": "To configure hardware settings"
+      },
+      {
+        "key": "B",
+        "text": "To play multimedia files"
+      },
+      {
+        "key": "C",
+        "text": "To monitor user login attempts"
+      },
+      {
+        "key": "D",
+        "text": "To manage email servers"
+      }
+    ],
+    "answers": [
+      "C"
+    ],
+    "type": "single",
+    "domain": "Log Utilization",
+    "topic": "Metric Generation",
+    "topicCode": "LU2",
+    "sourcePage": 7,
+    "flags": []
+  },
+  {
+    "id": 28,
+    "prompt": "Which Datadog feature allows you to set up alerts based on specific log patterns ?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Log Explorer"
+      },
+      {
+        "key": "B",
+        "text": "Log-based monitors"
+      },
+      {
+        "key": "C",
+        "text": "Network Monitor"
+      },
+      {
+        "key": "D",
+        "text": "Dashboard Manager"
+      }
+    ],
+    "answers": [
+      "B"
+    ],
+    "type": "single",
+    "domain": "Log Utilization",
+    "topic": "Monitors & Alerting",
+    "topicCode": "LU1",
+    "sourcePage": 8,
+    "flags": []
+  },
+  {
+    "id": 29,
+    "prompt": "How can you filter logs in the Log Explorer ?",
+    "options": [
+      {
+        "key": "A",
+        "text": "By using facets and search queries"
+      },
+      {
+        "key": "B",
+        "text": "By changing the screen resolution"
+      },
+      {
+        "key": "C",
+        "text": "By updating the operating system"
+      },
+      {
+        "key": "D",
+        "text": "By modifying user permissions"
+      }
+    ],
+    "answers": [
+      "A"
+    ],
+    "type": "single",
+    "domain": "Log Analysis",
+    "topic": "Filtering and Excluding",
+    "topicCode": "LA1",
+    "sourcePage": 8,
+    "flags": []
+  },
+  {
+    "id": 30,
+    "prompt": "Which actions can be performed using Datadog’s Log Explorer ? (Choose 3 answers)",
+    "options": [
+      {
+        "key": "A",
+        "text": "Visualize log trends"
+      },
+      {
+        "key": "B",
+        "text": "Filter and search logs"
+      },
+      {
+        "key": "C",
+        "text": "Update software drivers"
+      },
+      {
+        "key": "D",
+        "text": "Configure network settings"
+      },
+      {
+        "key": "E",
+        "text": "Create log-based metrics"
+      }
+    ],
+    "answers": [
+      "A",
+      "B",
+      "E"
+    ],
+    "type": "multi",
+    "domain": "Log Searching & Filtering",
+    "topic": "Explorer Functionality",
+    "topicCode": "SF3",
+    "sourcePage": 8,
+    "flags": []
+  },
+  {
+    "id": 31,
+    "prompt": "Which tool in Datadog allows for real-time log analysis ?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Log Explorer"
+      },
+      {
+        "key": "B",
+        "text": "Network Monitor"
+      },
+      {
+        "key": "C",
+        "text": "Trace Explorer"
+      },
+      {
+        "key": "D",
+        "text": "Configuration Manager"
+      }
+    ],
+    "answers": [
+      "A"
+    ],
+    "type": "single",
+    "domain": "Log Searching & Filtering",
+    "topic": "Explorer Functionality",
+    "topicCode": "SF3",
+    "sourcePage": 8,
+    "flags": []
+  },
+  {
+    "id": 32,
+    "prompt": "Which capabilities are offered by Datadog's Log Management ? (Choose 4 answers)",
+    "options": [
+      {
+        "key": "A",
+        "text": "Log-based alerting"
+      },
+      {
+        "key": "B",
+        "text": "Historical log analysis"
+      },
+      {
+        "key": "C",
+        "text": "User activity tracking"
+      },
+      {
+        "key": "D",
+        "text": "Automatic log data summarization"
+      },
+      {
+        "key": "E",
+        "text": "Real-time log monitoring"
+      }
+    ],
+    "answers": [
+      "A",
+      "B",
+      "C",
+      "E"
+    ],
+    "type": "multi",
+    "domain": "Logging Fundamentals",
+    "topic": "Logging Systems – Rationale & Justification",
+    "topicCode": "LF1",
+    "sourcePage": 9,
+    "flags": []
+  },
+  {
+    "id": 33,
+    "prompt": "Using structured logging formats like JSON helps improve log searchability and analysis in Datadog.",
+    "options": [
+      {
+        "key": "A",
+        "text": "False"
+      },
+      {
+        "key": "B",
+        "text": "True"
+      }
+    ],
+    "answers": [
+      "B"
+    ],
+    "type": "truefalse",
+    "domain": "Logging Fundamentals",
+    "topic": "Logging Formats",
+    "topicCode": "LF2",
+    "sourcePage": 9,
+    "flags": []
+  },
+  {
+    "id": 34,
+    "prompt": "Which Datadog component is responsible for collecting logs from different sources ?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Datadog Monitor"
+      },
+      {
+        "key": "B",
+        "text": "Datadog Dashboard"
+      },
+      {
+        "key": "C",
+        "text": "Datadog Agent"
+      },
+      {
+        "key": "D",
+        "text": "Datadog Server"
+      }
+    ],
+    "answers": [
+      "C"
+    ],
+    "type": "single",
+    "domain": "Log Collection",
+    "topic": "Enabling Log Collection",
+    "topicCode": "LC1",
+    "sourcePage": 9,
+    "flags": []
+  },
+  {
+    "id": 35,
+    "prompt": "Which components are necessary for setting up log collection in Datadog ? (Choose 3 answers)",
+    "options": [
+      {
+        "key": "A",
+        "text": "Log processing rules"
+      },
+      {
+        "key": "B",
+        "text": "Network monitoring tools"
+      },
+      {
+        "key": "C",
+        "text": "Log source configuration"
+      },
+      {
+        "key": "D",
+        "text": "Datadog Agent"
+      },
+      {
+        "key": "E",
+        "text": "Datadog Dashboard"
+      }
+    ],
+    "answers": [
+      "A",
+      "C",
+      "D"
+    ],
+    "type": "multi",
+    "domain": "Log Collection",
+    "topic": "Enabling Log Collection",
+    "topicCode": "LC1",
+    "sourcePage": 9,
+    "flags": []
+  },
+  {
+    "id": 36,
+    "prompt": "What is the function of log tags in Datadog ?",
+    "options": [
+      {
+        "key": "A",
+        "text": "To filter and categorize logs"
+      },
+      {
+        "key": "B",
+        "text": "To encrypt logs"
+      },
+      {
+        "key": "C",
+        "text": "To delete old logs"
+      },
+      {
+        "key": "D",
+        "text": "To secure log data"
+      }
+    ],
+    "answers": [
+      "A"
+    ],
+    "type": "single",
+    "domain": "Log Searching & Filtering",
+    "topic": "Explorer Functionality",
+    "topicCode": "SF3",
+    "sourcePage": 10,
+    "flags": []
+  },
+  {
+    "id": 37,
+    "prompt": "How can you ensure sensitive information in logs is protected in Datadog ?",
+    "options": [
+      {
+        "key": "A",
+        "text": "By using log scrubbing rules"
+      },
+      {
+        "key": "B",
+        "text": "By enabling log encryption"
+      },
+      {
+        "key": "C",
+        "text": "By disabling log collection"
+      },
+      {
+        "key": "D",
+        "text": "By deleting logs regularly"
+      }
+    ],
+    "answers": [
+      "A"
+    ],
+    "type": "single",
+    "domain": "Log Collection",
+    "topic": "Log Filtering & Obfuscation",
+    "topicCode": "LC2",
+    "sourcePage": 10,
+    "flags": []
+  },
+  {
+    "id": 38,
+    "prompt": "What is the main advantage of using Datadog’s log archiving feature ?",
+    "options": [
+      {
+        "key": "A",
+        "text": "To reduce storage costs for long-term log retention"
+      },
+      {
+        "key": "B",
+        "text": "To enhance real-time log analysis"
+      },
+      {
+        "key": "C",
+        "text": "To simplify log data encryption"
+      },
+      {
+        "key": "D",
+        "text": "To increase log ingestion speed"
+      }
+    ],
+    "answers": [
+      "A"
+    ],
+    "type": "single",
+    "domain": "Additional Topics",
+    "topic": "Retention, Archives & Rehydration",
+    "topicCode": "X1",
+    "sourcePage": 10,
+    "flags": []
+  },
+  {
+    "id": 39,
+    "prompt": "Which Datadog feature allows you to visualize log distribution over time ?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Service Map"
+      },
+      {
+        "key": "B",
+        "text": "Log Explorer"
+      },
+      {
+        "key": "C",
+        "text": "Metrics Explorer"
+      },
+      {
+        "key": "D",
+        "text": "Synthetics Monitor"
+      }
+    ],
+    "answers": [
+      "B"
+    ],
+    "type": "single",
+    "domain": "Log Analysis",
+    "topic": "Visualizing",
+    "topicCode": "LA3",
+    "sourcePage": 10,
+    "flags": []
+  },
+  {
+    "id": 40,
+    "prompt": "Datadog automatically encrypts all log data both in transit and at rest.",
+    "options": [
+      {
+        "key": "A",
+        "text": "True"
+      },
+      {
+        "key": "B",
+        "text": "False"
+      }
+    ],
+    "answers": [
+      "A"
+    ],
+    "type": "truefalse",
+    "domain": "Additional Topics",
+    "topic": "Security, RBAC & Audit Trail",
+    "topicCode": "X2",
+    "sourcePage": 11,
+    "flags": []
+  },
+  {
+    "id": 41,
+    "prompt": "Which features help ensure log data integrity in Datadog ? (Choose 3 answers)",
+    "options": [
+      {
+        "key": "A",
+        "text": "Log scrubbing"
+      },
+      {
+        "key": "B",
+        "text": "Monitoring log ingestion errors"
+      },
+      {
+        "key": "C",
+        "text": "Data encryption"
+      },
+      {
+        "key": "D",
+        "text": "Backup and restore"
+      },
+      {
+        "key": "E",
+        "text": "Access controls"
+      }
+    ],
+    "answers": [
+      "B",
+      "C",
+      "E"
+    ],
+    "type": "multi",
+    "domain": "Additional Topics",
+    "topic": "Security, RBAC & Audit Trail",
+    "topicCode": "X2",
+    "sourcePage": 11,
+    "flags": []
+  },
+  {
+    "id": 42,
+    "prompt": "Which integrations can be used to send logs to Datadog ? (Choose 4 answers)",
+    "options": [
+      {
+        "key": "A",
+        "text": "Fluentd"
+      },
+      {
+        "key": "B",
+        "text": "Google Cloud Logging"
+      },
+      {
+        "key": "C",
+        "text": "Apache Kafka"
+      },
+      {
+        "key": "D",
+        "text": "AWS CloudWatch Logs"
+      },
+      {
+        "key": "E",
+        "text": "Logstash"
+      }
+    ],
+    "answers": [
+      "A",
+      "B",
+      "D",
+      "E"
+    ],
+    "type": "multi",
+    "domain": "Log Collection",
+    "topic": "Enabling Log Collection",
+    "topicCode": "LC1",
+    "sourcePage": 11,
+    "flags": []
+  },
+  {
+    "id": 43,
+    "prompt": "What are best practices for managing large volumes of log data in Datadog ? (Choose 3 answers)",
+    "options": [
+      {
+        "key": "A",
+        "text": "Increase log retention periods"
+      },
+      {
+        "key": "B",
+        "text": "Implement log filtering"
+      },
+      {
+        "key": "C",
+        "text": "Use log archives"
+      },
+      {
+        "key": "D",
+        "text": "Monitor log ingestion rates"
+      },
+      {
+        "key": "E",
+        "text": "Compress log data"
+      }
+    ],
+    "answers": [
+      "B",
+      "C",
+      "D"
+    ],
+    "type": "multi",
+    "domain": "Log Collection",
+    "topic": "Log Filtering & Obfuscation",
+    "topicCode": "LC2",
+    "sourcePage": 11,
+    "flags": []
+  },
+  {
+    "id": 44,
+    "prompt": "Which log data formats are supported by Datadog for ingestion ? (Choose 4 answers)",
+    "options": [
+      {
+        "key": "A",
+        "text": "CSV"
+      },
+      {
+        "key": "B",
+        "text": "Plaintext"
+      },
+      {
+        "key": "C",
+        "text": "HTML"
+      },
+      {
+        "key": "D",
+        "text": "JSON"
+      },
+      {
+        "key": "E",
+        "text": "XML"
+      }
+    ],
+    "answers": [
+      "A",
+      "B",
+      "D",
+      "E"
+    ],
+    "type": "multi",
+    "domain": "Logging Fundamentals",
+    "topic": "Logging Formats",
+    "topicCode": "LF2",
+    "sourcePage": 12,
+    "flags": []
+  },
+  {
+    "id": 45,
+    "prompt": "What is the default retention period for logs in Datadog ?",
+    "options": [
+      {
+        "key": "A",
+        "text": "7 days"
+      },
+      {
+        "key": "B",
+        "text": "30 days"
+      },
+      {
+        "key": "C",
+        "text": "15 days"
+      },
+      {
+        "key": "D",
+        "text": "90 days"
+      }
+    ],
+    "answers": [
+      "B"
+    ],
+    "type": "single",
+    "domain": "Additional Topics",
+    "topic": "Retention, Archives & Rehydration",
+    "topicCode": "X1",
+    "sourcePage": 12,
+    "flags": []
+  },
+  {
+    "id": 46,
+    "prompt": "Which of the following is used to filter, parse, and enrich log data before it is indexed in Datadog ?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Dashboards"
+      },
+      {
+        "key": "B",
+        "text": "Log Pipelines"
+      },
+      {
+        "key": "C",
+        "text": "Metrics Explorer"
+      },
+      {
+        "key": "D",
+        "text": "Service Map"
+      }
+    ],
+    "answers": [
+      "B"
+    ],
+    "type": "single",
+    "domain": "Log Collection",
+    "topic": "Processors & Pipelines",
+    "topicCode": "LC3",
+    "sourcePage": 12,
+    "flags": []
+  },
+  {
+    "id": 47,
+    "prompt": "Datadog supports integration with both AWS CloudWatch Logs and Google Cloud Logging.",
+    "options": [
+      {
+        "key": "A",
+        "text": "False"
+      },
+      {
+        "key": "B",
+        "text": "True"
+      }
+    ],
+    "answers": [
+      "B"
+    ],
+    "type": "truefalse",
+    "domain": "Log Collection",
+    "topic": "Enabling Log Collection",
+    "topicCode": "LC1",
+    "sourcePage": 12,
+    "flags": []
+  },
+  {
+    "id": 48,
+    "prompt": "What actions can be performed with Datadog’s Log Processing Pipelines ? (Choose 4 answers)",
+    "options": [
+      {
+        "key": "A",
+        "text": "Compressing logs for storage"
+      },
+      {
+        "key": "B",
+        "text": "Enriching logs with additional information"
+      },
+      {
+        "key": "C",
+        "text": "Filtering out irrelevant logs"
+      },
+      {
+        "key": "D",
+        "text": "Converting logs to metrics"
+      },
+      {
+        "key": "E",
+        "text": "Parsing log data"
+      }
+    ],
+    "answers": [
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "type": "multi",
+    "domain": "Log Collection",
+    "topic": "Processors & Pipelines",
+    "topicCode": "LC3",
+    "sourcePage": 12,
+    "flags": []
+  },
+  {
+    "id": 49,
+    "prompt": "Which Datadog component is primarily responsible for sending logs to the Datadog platform ?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Datadog Monitor"
+      },
+      {
+        "key": "B",
+        "text": "Datadog Dashboard"
+      },
+      {
+        "key": "C",
+        "text": "Datadog Metrics Explorer"
+      },
+      {
+        "key": "D",
+        "text": "Datadog Agent"
+      }
+    ],
+    "answers": [
+      "D"
+    ],
+    "type": "single",
+    "domain": "Log Collection",
+    "topic": "Enabling Log Collection",
+    "topicCode": "LC1",
+    "sourcePage": 13,
+    "flags": []
+  },
+  {
+    "id": 50,
+    "prompt": "What is a common use case for using Grok patterns in Datadog ?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Visualizing log trends over time"
+      },
+      {
+        "key": "B",
+        "text": "Managing user access to logs"
+      },
+      {
+        "key": "C",
+        "text": "Parsing unstructured log data into structured formats"
+      },
+      {
+        "key": "D",
+        "text": "Encrypting log data"
+      }
+    ],
+    "answers": [
+      "C"
+    ],
+    "type": "single",
+    "domain": "Log Collection",
+    "topic": "Processors & Pipelines",
+    "topicCode": "LC3",
+    "sourcePage": 13,
+    "flags": []
+  },
+  {
+    "id": 51,
+    "prompt": "Which Datadog feature can help track the source of an application error ?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Log Explorer"
+      },
+      {
+        "key": "B",
+        "text": "Trace Explorer"
+      },
+      {
+        "key": "C",
+        "text": "Network Monitor"
+      },
+      {
+        "key": "D",
+        "text": "User Manager"
+      }
+    ],
+    "answers": [
+      "B"
+    ],
+    "type": "single",
+    "domain": "Additional Topics",
+    "topic": "Cross-product, architecture & APIs",
+    "topicCode": "X3",
+    "sourcePage": 13,
+    "flags": []
+  },
+  {
+    "id": 52,
+    "prompt": "What is the primary use of log facets in Datadog ?",
+    "options": [
+      {
+        "key": "A",
+        "text": "To update the system"
+      },
+      {
+        "key": "B",
+        "text": "To organize and filter log data"
+      },
+      {
+        "key": "C",
+        "text": "To encrypt log data"
+      },
+      {
+        "key": "D",
+        "text": "To manage user access"
+      }
+    ],
+    "answers": [
+      "B"
+    ],
+    "type": "single",
+    "domain": "Log Searching & Filtering",
+    "topic": "Explorer Functionality",
+    "topicCode": "SF3",
+    "sourcePage": 13,
+    "flags": []
+  },
+  {
+    "id": 53,
+    "prompt": "Which protocol is commonly used to send application logs to Datadog ?",
+    "options": [
+      {
+        "key": "A",
+        "text": "IMAP"
+      },
+      {
+        "key": "B",
+        "text": "FTP"
+      },
+      {
+        "key": "C",
+        "text": "HTTP"
+      },
+      {
+        "key": "D",
+        "text": "Syslog"
+      }
+    ],
+    "answers": [
+      "D"
+    ],
+    "type": "single",
+    "domain": "Logging Fundamentals",
+    "topic": "Log Emission",
+    "topicCode": "LF3",
+    "sourcePage": 14,
+    "flags": []
+  },
+  {
+    "id": 54,
+    "prompt": "In Datadog, it is not possible to filter logs based on their source attributes.",
+    "options": [
+      {
+        "key": "A",
+        "text": "True"
+      },
+      {
+        "key": "B",
+        "text": "False"
+      }
+    ],
+    "answers": [
+      "B"
+    ],
+    "type": "truefalse",
+    "domain": "Log Analysis",
+    "topic": "Filtering and Excluding",
+    "topicCode": "LA1",
+    "sourcePage": 14,
+    "flags": []
+  },
+  {
+    "id": 55,
+    "prompt": "What feature in Datadog allows you to set up automated alerts based on specific log patterns ?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Log-based Monitors"
+      },
+      {
+        "key": "B",
+        "text": "Log Explorer"
+      },
+      {
+        "key": "C",
+        "text": "Metrics Explorer"
+      },
+      {
+        "key": "D",
+        "text": "Service Map"
+      }
+    ],
+    "answers": [
+      "A"
+    ],
+    "type": "single",
+    "domain": "Log Utilization",
+    "topic": "Monitors & Alerting",
+    "topicCode": "LU1",
+    "sourcePage": 14,
+    "flags": []
+  },
+  {
+    "id": 56,
+    "prompt": "What are benefits of structured logging ? (Choose 3 answers)",
+    "options": [
+      {
+        "key": "A",
+        "text": "Better log searchability"
+      },
+      {
+        "key": "B",
+        "text": "Enhanced log security"
+      },
+      {
+        "key": "C",
+        "text": "Improved log correlation"
+      },
+      {
+        "key": "D",
+        "text": "Easier log parsing"
+      },
+      {
+        "key": "E",
+        "text": "More efficient storage"
+      }
+    ],
+    "answers": [
+      "A",
+      "C",
+      "D"
+    ],
+    "type": "multi",
+    "domain": "Logging Fundamentals",
+    "topic": "Logging Formats",
+    "topicCode": "LF2",
+    "sourcePage": 14,
+    "flags": []
+  },
+  {
+    "id": 57,
+    "prompt": "What does the Datadog Agent do when it encounters a log file it cannot read ?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Alerts the user"
+      },
+      {
+        "key": "B",
+        "text": "Deletes the log file"
+      },
+      {
+        "key": "C",
+        "text": "Automatically reconfigures itself"
+      },
+      {
+        "key": "D",
+        "text": "Skips the log file"
+      }
+    ],
+    "answers": [
+      "D"
+    ],
+    "type": "single",
+    "domain": "Log Troubleshooting",
+    "topic": "Ingestion Issues",
+    "topicCode": "LT1",
+    "sourcePage": 15,
+    "flags": []
+  },
+  {
+    "id": 58,
+    "prompt": "How can logs be forwarded to third-party services from Datadog ? (Choose 3 answers)",
+    "options": [
+      {
+        "key": "A",
+        "text": "By exporting as CSV files"
+      },
+      {
+        "key": "B",
+        "text": "Using webhooks"
+      },
+      {
+        "key": "C",
+        "text": "Via email"
+      },
+      {
+        "key": "D",
+        "text": "Using API integrations"
+      },
+      {
+        "key": "E",
+        "text": "Through syslog forwarding"
+      }
+    ],
+    "answers": [
+      "B",
+      "D",
+      "E"
+    ],
+    "type": "multi",
+    "domain": "Log Utilization",
+    "topic": "Exporting",
+    "topicCode": "LU3",
+    "sourcePage": 15,
+    "flags": []
+  },
+  {
+    "id": 59,
+    "prompt": "What are common steps to troubleshoot missing logs in Datadog ? (Choose 3 answers)",
+    "options": [
+      {
+        "key": "A",
+        "text": "Restart the server"
+      },
+      {
+        "key": "B",
+        "text": "Review log source configuration"
+      },
+      {
+        "key": "C",
+        "text": "Check the Datadog Agent status"
+      },
+      {
+        "key": "D",
+        "text": "Update log retention policies"
+      },
+      {
+        "key": "E",
+        "text": "Verify network connectivity"
+      }
+    ],
+    "answers": [
+      "B",
+      "C",
+      "E"
+    ],
+    "type": "multi",
+    "domain": "Log Troubleshooting",
+    "topic": "Ingestion Issues",
+    "topicCode": "LT1",
+    "sourcePage": 15,
+    "flags": []
+  },
+  {
+    "id": 60,
+    "prompt": "You can use Datadog’s Log Explorer to create custom dashboards that include log data.",
+    "options": [
+      {
+        "key": "A",
+        "text": "True"
+      },
+      {
+        "key": "B",
+        "text": "False"
+      }
+    ],
+    "answers": [
+      "A"
+    ],
+    "type": "truefalse",
+    "domain": "Log Analysis",
+    "topic": "Visualizing",
+    "topicCode": "LA3",
+    "sourcePage": 15,
+    "flags": []
+  },
+  {
+    "id": 61,
+    "prompt": "How does Datadog handle log data scalability, and what strategies can be employed to ensure efficient log collection and analysis in large-scale environments ?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Datadog provides native integrations with big data platforms like Apache Kafka and Hadoop for storing and processing massive volumes of log data. Strategies to ensure efficiency in large-scale environments include using log partitioning and parallel processing."
+      },
+      {
+        "key": "B",
+        "text": "Datadog uses a centralized log storage system with built-in redundancy and failover mechanisms to ensure high availability and scalability. Strategies to ensure efficiency in large-scale environments include using log sharding and optimizing query performance."
+      },
+      {
+        "key": "C",
+        "text": "Datadog leverages cloud-native technologies such as auto-scaling and serverless computing to dynamically adjust resources based on demand. Strategies to ensure efficiency in large-scale environments include using log aggregation and pre-processing techniques."
+      },
+      {
+        "key": "D",
+        "text": "Datadog employs a distributed architecture that scales horizontally to accommodate increasing log volumes. Strategies to ensure efficiency in large-scale environments include using log sampling and optimizing log processing pipelines."
+      }
+    ],
+    "answers": [
+      "D"
+    ],
+    "type": "single",
+    "domain": "Additional Topics",
+    "topic": "Cross-product, architecture & APIs",
+    "topicCode": "X3",
+    "sourcePage": 16,
+    "flags": []
+  },
+  {
+    "id": 62,
+    "prompt": "Discuss the challenges associated with real-time log monitoring and how Datadog addresses them.",
+    "options": [
+      {
+        "key": "A",
+        "text": "Real-time log monitoring requires seamless integration with existing infrastructure and applications to capture and analyze log data effectively. Datadog addresses this challenge by offering a wide range of integrations with popular platforms and technologies, simplifying the deployment and configuration process."
+      },
+      {
+        "key": "B",
+        "text": "Real-time log monitoring often involves dealing with noisy log data and false positives, which can overwhelm operators and lead to alert fatigue. Datadog mitigates this challenge by providing advanced filtering and aggregation capabilities, allowing users to focus on relevant log events and reduce noise."
+      },
+      {
+        "key": "C",
+        "text": "Real-time log monitoring requires processing large volumes of log data quickly and accurately to detect and respond to events as they occur. Datadog addresses this challenge by employing scalable, distributed architectures that can handle high throughput and low latency log ingestion and analysis."
+      },
+      {
+        "key": "D",
+        "text": "Real-time log monitoring necessitates robust security measures to protect sensitive log data from unauthorized access and ensure compliance with data privacy regulations. Datadog addresses this challenge by implementing encryption, access controls, and auditing features to safeguard log data and enforce compliance standards."
+      }
+    ],
+    "answers": [
+      "C"
+    ],
+    "type": "single",
+    "domain": "Log Utilization",
+    "topic": "Monitors & Alerting",
+    "topicCode": "LU1",
+    "sourcePage": 16,
+    "flags": []
+  },
+  {
+    "id": 63,
+    "prompt": "Datadog does not support the forwarding of logs to third-party storage solutions like Amazon S3.",
+    "options": [
+      {
+        "key": "A",
+        "text": "True"
+      },
+      {
+        "key": "B",
+        "text": "False"
+      }
+    ],
+    "answers": [
+      "B"
+    ],
+    "type": "truefalse",
+    "domain": "Log Utilization",
+    "topic": "Exporting",
+    "topicCode": "LU3",
+    "sourcePage": 16,
+    "flags": []
+  },
+  {
+    "id": 64,
+    "prompt": "How can Datadog help ensure compliance with data retention policies ?",
+    "options": [
+      {
+        "key": "A",
+        "text": "By automatically deleting logs after a set period"
+      },
+      {
+        "key": "B",
+        "text": "By preventing log ingestion"
+      },
+      {
+        "key": "C",
+        "text": "By encrypting all logs"
+      },
+      {
+        "key": "D",
+        "text": "By providing audit trails for log access"
+      }
+    ],
+    "answers": [
+      "A"
+    ],
+    "type": "single",
+    "domain": "Additional Topics",
+    "topic": "Retention, Archives & Rehydration",
+    "topicCode": "X1",
+    "sourcePage": 17,
+    "flags": []
+  },
+  {
+    "id": 65,
+    "prompt": "What is the purpose of log sampling, and how does it impact log analysis in Datadog ?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Log sampling is used to aggregate logs from multiple sources into a single stream, simplifying analysis. It impacts log analysis by reducing the diversity of log data."
+      },
+      {
+        "key": "B",
+        "text": "Log sampling is used to reduce the volume of logs ingested by Datadog, improving performance and reducing costs. It can impact log analysis by potentially missing important log events."
+      },
+      {
+        "key": "C",
+        "text": "Log sampling is used to ensure that only a representative subset of logs is analyzed, allowing for more efficient resource utilization. It impacts log analysis by providing less granular insights into system behavior."
+      },
+      {
+        "key": "D",
+        "text": "Log sampling is used to prioritize certain types of logs over others, focusing analysis on critical events. It impacts log analysis by skewing results towards the sampled logs."
+      }
+    ],
+    "answers": [
+      "B"
+    ],
+    "type": "single",
+    "domain": "Log Collection",
+    "topic": "Log Filtering & Obfuscation",
+    "topicCode": "LC2",
+    "sourcePage": 17,
+    "flags": []
+  },
+  {
+    "id": 66,
+    "prompt": "Datadog allows you to set up role-based access control (RBAC) to manage user permissions for viewing and managing logs.",
+    "options": [
+      {
+        "key": "A",
+        "text": "False"
+      },
+      {
+        "key": "B",
+        "text": "True"
+      }
+    ],
+    "answers": [
+      "B"
+    ],
+    "type": "truefalse",
+    "domain": "Additional Topics",
+    "topic": "Security, RBAC & Audit Trail",
+    "topicCode": "X2",
+    "sourcePage": 17,
+    "flags": []
+  },
+  {
+    "id": 67,
+    "prompt": "Which Datadog feature can be used to visualize log data alongside application performance metrics ?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Network Monitor"
+      },
+      {
+        "key": "B",
+        "text": "Dashboards"
+      },
+      {
+        "key": "C",
+        "text": "Service Map"
+      },
+      {
+        "key": "D",
+        "text": "Log Pipelines"
+      }
+    ],
+    "answers": [
+      "B"
+    ],
+    "type": "single",
+    "domain": "Log Analysis",
+    "topic": "Visualizing",
+    "topicCode": "LA3",
+    "sourcePage": 17,
+    "flags": []
+  },
+  {
+    "id": 68,
+    "prompt": "Discuss the potential challenges and solutions associated with managing log data security and compliance requirements in Datadog.",
+    "options": [
+      {
+        "key": "A",
+        "text": "One challenge is preventing data breaches resulting from misconfigured log access controls. Solutions include implementing role-based access control (RBAC) and monitoring user activity to detect and respond to suspicious behavior."
+      },
+      {
+        "key": "B",
+        "text": "One challenge is ensuring that sensitive information in logs is protected from unauthorized access. Solutions include using log scrubbing techniques to redact or anonymize sensitive data before indexing."
+      },
+      {
+        "key": "C",
+        "text": "One challenge is ensuring the integrity and authenticity of log data to meet audit requirements. Solutions include using cryptographic hashing techniques to create digital signatures for log entries and storing logs in tamper-evident formats."
+      },
+      {
+        "key": "D",
+        "text": "One challenge is maintaining compliance with data retention regulations while minimizing storage costs. Solutions include implementing lifecycle management policies to automatically archive or delete logs based on predefined criteria."
+      }
+    ],
+    "answers": [
+      "B"
+    ],
+    "type": "single",
+    "domain": "Log Collection",
+    "topic": "Log Filtering & Obfuscation",
+    "topicCode": "LC2",
+    "sourcePage": 18,
+    "flags": []
+  },
+  {
+    "id": 69,
+    "prompt": "Explain the concept of log rehydration in Datadog, including its benefits, challenges, and use cases.",
+    "options": [
+      {
+        "key": "A",
+        "text": "Log rehydration involves restoring archived logs from long-term storage for analysis. Benefits include preserving historical log data for compliance and forensic purposes, but challenges include managing storage costs and retrieval times."
+      },
+      {
+        "key": "B",
+        "text": "Log rehydration involves enriching log data with additional context before indexing. Benefits include enhancing log analysis capabilities, but challenges include defining and maintaining parsing rules for complex log formats."
+      },
+      {
+        "key": "C",
+        "text": "Log rehydration involves scrubbing log data to remove sensitive information before indexing. Benefits include improving data privacy and security, but challenges include identifying and redacting sensitive data across diverse log sources."
+      },
+      {
+        "key": "D",
+        "text": "Log rehydration involves compressing log data to reduce storage overhead. Benefits include optimizing storage efficiency, but challenges include maintaining log accessibility and searchability."
+      }
+    ],
+    "answers": [
+      "A"
+    ],
+    "type": "single",
+    "domain": "Additional Topics",
+    "topic": "Retention, Archives & Rehydration",
+    "topicCode": "X1",
+    "sourcePage": 18,
+    "flags": []
+  },
+  {
+    "id": 70,
+    "prompt": "Which features in Datadog enhance log searchability ? (Choose 3 answers)",
+    "options": [
+      {
+        "key": "A",
+        "text": "Data encryption"
+      },
+      {
+        "key": "B",
+        "text": "Structured logging"
+      },
+      {
+        "key": "C",
+        "text": "Log scrubbing"
+      },
+      {
+        "key": "D",
+        "text": "Tagging logs"
+      },
+      {
+        "key": "E",
+        "text": "Use of facets"
+      }
+    ],
+    "answers": [
+      "B",
+      "D",
+      "E"
+    ],
+    "type": "multi",
+    "domain": "Log Analysis",
+    "topic": "Filtering and Excluding",
+    "topicCode": "LA1",
+    "sourcePage": 18,
+    "flags": []
+  },
+  {
+    "id": 71,
+    "prompt": "Discuss the role of log retention policies in log management, and explain how they can be tailored to meet specific business needs and regulatory requirements.",
+    "options": [
+      {
+        "key": "A",
+        "text": "Log retention policies govern the lifecycle of log data from ingestion to archival, ensuring compliance with regulatory standards and data governance policies. They can be adjusted dynamically to adapt to changing business requirements and industry regulations."
+      },
+      {
+        "key": "B",
+        "text": "Log retention policies ensure that only relevant log events are retained for analysis, reducing storage overhead and improving query performance. They can be tailored to meet specific business needs by defining retention periods based on data importance and usage patterns."
+      },
+      {
+        "key": "C",
+        "text": "Log retention policies establish guidelines for log data categorization, classification, and archival based on factors such as data sensitivity, business impact, and legal requirements. They can be enforced through automated workflows and audit trails to maintain data integrity and accountability."
+      },
+      {
+        "key": "D",
+        "text": "Log retention policies define how long log data should be stored in Datadog before being archived or deleted. They can be customized based on factors such as compliance regulations, data access requirements, and storage costs."
+      }
+    ],
+    "answers": [
+      "D"
+    ],
+    "type": "single",
+    "domain": "Additional Topics",
+    "topic": "Retention, Archives & Rehydration",
+    "topicCode": "X1",
+    "sourcePage": 19,
+    "flags": []
+  },
+  {
+    "id": 72,
+    "prompt": "What are the benefits of using Datadog for log management ? (Choose 4 answers)",
+    "options": [
+      {
+        "key": "A",
+        "text": "Increased log storage capacity"
+      },
+      {
+        "key": "B",
+        "text": "Real-time log monitoring"
+      },
+      {
+        "key": "C",
+        "text": "Reduced need for manual log analysis"
+      },
+      {
+        "key": "D",
+        "text": "Integration with various cloud providers"
+      },
+      {
+        "key": "E",
+        "text": "Automated log parsing and enrichment"
+      }
+    ],
+    "answers": [
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "type": "multi",
+    "domain": "Logging Fundamentals",
+    "topic": "Logging Systems – Rationale & Justification",
+    "topicCode": "LF1",
+    "sourcePage": 19,
+    "flags": []
+  },
+  {
+    "id": 73,
+    "prompt": "What is a key benefit of using the Datadog Log Explorer ?",
+    "options": [
+      {
+        "key": "A",
+        "text": "It automatically fixes application errors"
+      },
+      {
+        "key": "B",
+        "text": "It reduces network latency"
+      },
+      {
+        "key": "C",
+        "text": "It enhances data encryption"
+      },
+      {
+        "key": "D",
+        "text": "It allows for real-time log searching and filtering"
+      }
+    ],
+    "answers": [
+      "D"
+    ],
+    "type": "single",
+    "domain": "Log Searching & Filtering",
+    "topic": "Explorer Functionality",
+    "topicCode": "SF3",
+    "sourcePage": 19,
+    "flags": []
+  },
+  {
+    "id": 74,
+    "prompt": "Which component in Datadog is responsible for processing logs before they are indexed ?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Log Pipelines"
+      },
+      {
+        "key": "B",
+        "text": "Datadog Agent"
+      },
+      {
+        "key": "C",
+        "text": "Log Explorer"
+      },
+      {
+        "key": "D",
+        "text": "Network Monitor"
+      }
+    ],
+    "answers": [
+      "A"
+    ],
+    "type": "single",
+    "domain": "Log Collection",
+    "topic": "Processors & Pipelines",
+    "topicCode": "LC3",
+    "sourcePage": 20,
+    "flags": []
+  },
+  {
+    "id": 75,
+    "prompt": "Datadog cannot automatically parse JSON-formatted logs; they must be manually formatted.",
+    "options": [
+      {
+        "key": "A",
+        "text": "True"
+      },
+      {
+        "key": "B",
+        "text": "False"
+      }
+    ],
+    "answers": [
+      "B"
+    ],
+    "type": "truefalse",
+    "domain": "Log Collection",
+    "topic": "Processors & Pipelines",
+    "topicCode": "LC3",
+    "sourcePage": 20,
+    "flags": []
+  },
+  {
+    "id": 76,
+    "prompt": "Describe the role of log parsing rules in Datadog's log processing pipelines, and provide an example of a complex parsing scenario.",
+    "options": [
+      {
+        "key": "A",
+        "text": "Log parsing rules specify which logs should be processed and which should be ignored, optimizing resource usage. An example of a complex parsing scenario could involve parsing logs with irregular timestamps."
+      },
+      {
+        "key": "B",
+        "text": "Log parsing rules determine how log data is enriched with metadata and contextual information, enhancing analysis capabilities. An example of a complex parsing scenario could involve parsing multi- line log messages."
+      },
+      {
+        "key": "C",
+        "text": "Log parsing rules define how log data is formatted and structured, allowing for consistent indexing and analysis. An example of a complex parsing scenario could involve extracting specific fields from nested JSON log messages."
+      },
+      {
+        "key": "D",
+        "text": "Log parsing rules filter out irrelevant log events based on predefined criteria, reducing noise in the analysis. An example of a complex parsing scenario could involve parsing logs with non-standard encoding formats."
+      }
+    ],
+    "answers": [
+      "C"
+    ],
+    "type": "single",
+    "domain": "Log Collection",
+    "topic": "Processors & Pipelines",
+    "topicCode": "LC3",
+    "sourcePage": 20,
+    "flags": []
+  },
+  {
+    "id": 77,
+    "prompt": "What can be configured to automatically forward specific logs to another service ?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Log Pipelines"
+      },
+      {
+        "key": "B",
+        "text": "Network Monitor"
+      },
+      {
+        "key": "C",
+        "text": "Log Explorer"
+      },
+      {
+        "key": "D",
+        "text": "Metrics Explorer"
+      }
+    ],
+    "answers": [
+      "A"
+    ],
+    "type": "single",
+    "domain": "Log Utilization",
+    "topic": "Exporting",
+    "topicCode": "LU3",
+    "sourcePage": 20,
+    "flags": []
+  },
+  {
+    "id": 78,
+    "prompt": "Which of the following is a key feature of Datadog’s log rehydration ?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Rehydrating logs compresses them for storage"
+      },
+      {
+        "key": "B",
+        "text": "Rehydrating logs deletes old logs"
+      },
+      {
+        "key": "C",
+        "text": "Rehydrating logs encrypts them"
+      },
+      {
+        "key": "D",
+        "text": "Rehydrating logs restores archived logs for analysis"
+      }
+    ],
+    "answers": [
+      "D"
+    ],
+    "type": "single",
+    "domain": "Additional Topics",
+    "topic": "Retention, Archives & Rehydration",
+    "topicCode": "X1",
+    "sourcePage": 21,
+    "flags": []
+  },
+  {
+    "id": 79,
+    "prompt": "Which features in Datadog aid in log data analysis and troubleshooting ? (Choose 3 answers)",
+    "options": [
+      {
+        "key": "A",
+        "text": "Log-based monitors"
+      },
+      {
+        "key": "B",
+        "text": "Log rehydration"
+      },
+      {
+        "key": "C",
+        "text": "Log-based metrics"
+      },
+      {
+        "key": "D",
+        "text": "Log retention policies"
+      },
+      {
+        "key": "E",
+        "text": "Log scrubbing"
+      }
+    ],
+    "answers": [
+      "A",
+      "B",
+      "C"
+    ],
+    "type": "multi",
+    "domain": "Log Utilization",
+    "topic": "Monitors & Alerting",
+    "topicCode": "LU1",
+    "sourcePage": 21,
+    "flags": []
+  },
+  {
+    "id": 80,
+    "prompt": "Log retention settings in Datadog can be customized to meet specific compliance requirements.",
+    "options": [
+      {
+        "key": "A",
+        "text": "True"
+      },
+      {
+        "key": "B",
+        "text": "False"
+      }
+    ],
+    "answers": [
+      "A"
+    ],
+    "type": "truefalse",
+    "domain": "Additional Topics",
+    "topic": "Retention, Archives & Rehydration",
+    "topicCode": "X1",
+    "sourcePage": 21,
+    "flags": []
+  },
+  {
+    "id": 81,
+    "prompt": "What is the purpose of Datadog’s log scrubbing feature ?",
+    "options": [
+      {
+        "key": "A",
+        "text": "To encrypt log data"
+      },
+      {
+        "key": "B",
+        "text": "To archive old logs"
+      },
+      {
+        "key": "C",
+        "text": "To compress log files"
+      },
+      {
+        "key": "D",
+        "text": "To remove sensitive information from logs"
+      }
+    ],
+    "answers": [
+      "D"
+    ],
+    "type": "single",
+    "domain": "Log Collection",
+    "topic": "Log Filtering & Obfuscation",
+    "topicCode": "LC2",
+    "sourcePage": 21,
+    "flags": []
+  },
+  {
+    "id": 82,
+    "prompt": "What is the main advantage of using tags in Datadog for log management ?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Tags improve log data encryption"
+      },
+      {
+        "key": "B",
+        "text": "Tags increase log storage efficiency"
+      },
+      {
+        "key": "C",
+        "text": "Tags reduce log ingestion costs"
+      },
+      {
+        "key": "D",
+        "text": "Tags help categorize and filter logs for easier searching"
+      }
+    ],
+    "answers": [
+      "D"
+    ],
+    "type": "single",
+    "domain": "Log Searching & Filtering",
+    "topic": "Explorer Functionality",
+    "topicCode": "SF3",
+    "sourcePage": 22,
+    "flags": []
+  },
+  {
+    "id": 83,
+    "prompt": "You can create alerts in Datadog that are triggered by the appearance of specific log patterns",
+    "options": [
+      {
+        "key": "A",
+        "text": "False"
+      },
+      {
+        "key": "B",
+        "text": "True"
+      }
+    ],
+    "answers": [
+      "B"
+    ],
+    "type": "truefalse",
+    "domain": "Log Utilization",
+    "topic": "Monitors & Alerting",
+    "topicCode": "LU1",
+    "sourcePage": 22,
+    "flags": []
+  },
+  {
+    "id": 84,
+    "prompt": "Which methods can be used to ingest logs into Datadog ? (Choose 4 answers)",
+    "options": [
+      {
+        "key": "A",
+        "text": "Syslog"
+      },
+      {
+        "key": "B",
+        "text": "Amazon Kinesis"
+      },
+      {
+        "key": "C",
+        "text": "Fluentd"
+      },
+      {
+        "key": "D",
+        "text": "Microsoft Excel"
+      },
+      {
+        "key": "E",
+        "text": "Datadog Agent"
+      }
+    ],
+    "answers": [
+      "A",
+      "B",
+      "C",
+      "E"
+    ],
+    "type": "multi",
+    "domain": "Log Collection",
+    "topic": "Enabling Log Collection",
+    "topicCode": "LC1",
+    "sourcePage": 22,
+    "flags": []
+  },
+  {
+    "id": 85,
+    "prompt": "Which best practices help optimize log collection in Datadog ? (Choose 3 answers)",
+    "options": [
+      {
+        "key": "A",
+        "text": "Monitoring log ingestion rates"
+      },
+      {
+        "key": "B",
+        "text": "Increasing log retention periods"
+      },
+      {
+        "key": "C",
+        "text": "Configuring log sampling"
+      },
+      {
+        "key": "D",
+        "text": "Using structured logging formats"
+      },
+      {
+        "key": "E",
+        "text": "Disabling log collection for critical systems"
+      }
+    ],
+    "answers": [
+      "A",
+      "C",
+      "D"
+    ],
+    "type": "multi",
+    "domain": "Log Collection",
+    "topic": "Log Filtering & Obfuscation",
+    "topicCode": "LC2",
+    "sourcePage": 22,
+    "flags": []
+  },
+  {
+    "id": 86,
+    "prompt": "Explain how Datadog's log-based monitors differ from traditional alerting systems, and discuss their advantages in complex monitoring environments.",
+    "options": [
+      {
+        "key": "A",
+        "text": "Log-based monitors correlate log events with performance metrics in real-time, offering a holistic view of system health. Their advantages in complex environments include better root cause analysis and faster incident resolution."
+      },
+      {
+        "key": "B",
+        "text": "Log-based monitors integrate with third-party anomaly detection tools, enhancing their ability to detect subtle deviations from normal log behavior. Their advantages in complex environments include higher accuracy and lower false positive rates."
+      },
+      {
+        "key": "C",
+        "text": "Log-based monitors use machine learning algorithms to detect abnormal log behavior, offering predictive insights not available in traditional alerting systems. Their advantages in complex environments include proactive issue detection and prevention."
+      },
+      {
+        "key": "D",
+        "text": "Log-based monitors trigger alerts based on specific log patterns or conditions, providing more context-rich notifications compared to traditional alerting systems. Their advantages in complex environments include the ability to detect anomalies across distributed systems."
+      }
+    ],
+    "answers": [
+      "D"
+    ],
+    "type": "single",
+    "domain": "Log Utilization",
+    "topic": "Monitors & Alerting",
+    "topicCode": "LU1",
+    "sourcePage": 23,
+    "flags": []
+  },
+  {
+    "id": 87,
+    "prompt": "What types of alerts can be configured in Datadog based on log data ? (Choose 4 answers)",
+    "options": [
+      {
+        "key": "A",
+        "text": "Security alerts"
+      },
+      {
+        "key": "B",
+        "text": "Error alerts"
+      },
+      {
+        "key": "C",
+        "text": "Log volume alerts"
+      },
+      {
+        "key": "D",
+        "text": "Network connectivity alerts"
+      },
+      {
+        "key": "E",
+        "text": "Performance degradation alerts"
+      }
+    ],
+    "answers": [
+      "A",
+      "B",
+      "C",
+      "E"
+    ],
+    "type": "multi",
+    "domain": "Log Utilization",
+    "topic": "Monitors & Alerting",
+    "topicCode": "LU1",
+    "sourcePage": 23,
+    "flags": []
+  },
+  {
+    "id": 88,
+    "prompt": "Which log formats can be ingested by Datadog without additional configuration ?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Plaintext and CSV"
+      },
+      {
+        "key": "B",
+        "text": "PDF and DOCX"
+      },
+      {
+        "key": "C",
+        "text": "JPEG and PNG"
+      },
+      {
+        "key": "D",
+        "text": "JSON and XML"
+      }
+    ],
+    "answers": [
+      "D"
+    ],
+    "type": "single",
+    "domain": "Logging Fundamentals",
+    "topic": "Logging Formats",
+    "topicCode": "LF2",
+    "sourcePage": 23,
+    "flags": []
+  },
+  {
+    "id": 89,
+    "prompt": "What is a common use case for setting up log-based alerts in Datadog ?",
+    "options": [
+      {
+        "key": "A",
+        "text": "To monitor log storage capacity"
+      },
+      {
+        "key": "B",
+        "text": "To update user permissions"
+      },
+      {
+        "key": "C",
+        "text": "To detect security breaches"
+      },
+      {
+        "key": "D",
+        "text": "To generate marketing reports"
+      }
+    ],
+    "answers": [
+      "C"
+    ],
+    "type": "single",
+    "domain": "Log Utilization",
+    "topic": "Monitors & Alerting",
+    "topicCode": "LU1",
+    "sourcePage": 23,
+    "flags": []
+  },
+  {
+    "id": 90,
+    "prompt": "Explain the concept of log aggregation and its importance in log management.",
+    "options": [
+      {
+        "key": "A",
+        "text": "Log aggregation entails encrypting log data to protect sensitive information from unauthorized access and ensure data privacy and security. It is important in log management as it helps mitigate the risk of data breaches and regulatory non-compliance."
+      },
+      {
+        "key": "B",
+        "text": "Log aggregation involves consolidating log data from multiple sources into a centralized repository for analysis and monitoring. It is important in log management as it allows for a unified view of system behavior and performance across distributed environments."
+      },
+      {
+        "key": "C",
+        "text": "Log aggregation involves parsing log data to extract relevant information and enrich it with additional context for analysis and visualization. It is important in log management as it enables more accurate and insightful log analysis, leading to faster incident detection and resolution."
+      },
+      {
+        "key": "D",
+        "text": "Log aggregation refers to the process of compressing log data to reduce storage costs and optimize resource usage. It is important in log management as it ensures efficient utilization of storage resources and facilitates long-term retention of log data."
+      }
+    ],
+    "answers": [
+      "B"
+    ],
+    "type": "single",
+    "domain": "Logging Fundamentals",
+    "topic": "Logging Systems – Rationale & Justification",
+    "topicCode": "LF1",
+    "sourcePage": 24,
+    "flags": []
+  },
+  {
+    "id": 91,
+    "prompt": "How can you use tags to organize and filter logs in Datadog ?",
+    "options": [
+      {
+        "key": "A",
+        "text": "By modifying system files"
+      },
+      {
+        "key": "B",
+        "text": "By applying tags to logs and using them in search filters"
+      },
+      {
+        "key": "C",
+        "text": "By using external software"
+      },
+      {
+        "key": "D",
+        "text": "By updating the operating system"
+      }
+    ],
+    "answers": [
+      "B"
+    ],
+    "type": "single",
+    "domain": "Log Analysis",
+    "topic": "Filtering and Excluding",
+    "topicCode": "LA1",
+    "sourcePage": 24,
+    "flags": []
+  },
+  {
+    "id": 92,
+    "prompt": "What is the importance of log retention, and how is it configured in Datadog ?",
+    "options": [
+      {
+        "key": "A",
+        "text": "For compliance and long-term analysis, configured in the Datadog UI"
+      },
+      {
+        "key": "B",
+        "text": "For changing desktop wallpaper"
+      },
+      {
+        "key": "C",
+        "text": "For disabling log collection"
+      },
+      {
+        "key": "D",
+        "text": "For data privacy"
+      }
+    ],
+    "answers": [
+      "A"
+    ],
+    "type": "single",
+    "domain": "Additional Topics",
+    "topic": "Retention, Archives & Rehydration",
+    "topicCode": "X1",
+    "sourcePage": 24,
+    "flags": []
+  },
+  {
+    "id": 93,
+    "prompt": "Datadog's Audit Trail feature tracks changes and actions taken within the system.",
+    "options": [
+      {
+        "key": "A",
+        "text": "True"
+      },
+      {
+        "key": "B",
+        "text": "False"
+      }
+    ],
+    "answers": [
+      "A"
+    ],
+    "type": "truefalse",
+    "domain": "Additional Topics",
+    "topic": "Security, RBAC & Audit Trail",
+    "topicCode": "X2",
+    "sourcePage": 25,
+    "flags": []
+  },
+  {
+    "id": 94,
+    "prompt": "What are the advantages of using log-based metrics in Datadog ? (Choose 2 answers)",
+    "options": [
+      {
+        "key": "A",
+        "text": "Enables customization of log visualization in dashboards"
+      },
+      {
+        "key": "B",
+        "text": "Facilitates correlation between log data and infrastructure metrics"
+      },
+      {
+        "key": "C",
+        "text": "Provides insights into log volume trends"
+      },
+      {
+        "key": "D",
+        "text": "Allows for monitoring of specific log events"
+      }
+    ],
+    "answers": [
+      "B",
+      "C"
+    ],
+    "type": "multi",
+    "domain": "Log Utilization",
+    "topic": "Metric Generation",
+    "topicCode": "LU2",
+    "sourcePage": 25,
+    "flags": []
+  },
+  {
+    "id": 95,
+    "prompt": "What are the different log sources that Datadog can integrate with ?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Only spreadsheets"
+      },
+      {
+        "key": "B",
+        "text": "Only databases"
+      },
+      {
+        "key": "C",
+        "text": "Various cloud services, platforms, and local files"
+      },
+      {
+        "key": "D",
+        "text": "Only local files"
+      }
+    ],
+    "answers": [
+      "C"
+    ],
+    "type": "single",
+    "domain": "Logging Fundamentals",
+    "topic": "Log Emission",
+    "topicCode": "LF3",
+    "sourcePage": 25,
+    "flags": []
+  },
+  {
+    "id": 96,
+    "prompt": "Log-based metrics in Datadog allow you to monitor numeric values extracted from logs.",
+    "options": [
+      {
+        "key": "A",
+        "text": "False"
+      },
+      {
+        "key": "B",
+        "text": "True"
+      }
+    ],
+    "answers": [
+      "B"
+    ],
+    "type": "truefalse",
+    "domain": "Log Utilization",
+    "topic": "Metric Generation",
+    "topicCode": "LU2",
+    "sourcePage": 25,
+    "flags": []
+  },
+  {
+    "id": 97,
+    "prompt": "Which of the following are benefits of using tags in Datadog log management ? (Choose 3 answers)",
+    "options": [
+      {
+        "key": "A",
+        "text": "Facilitates the creation of log-based metrics"
+      },
+      {
+        "key": "B",
+        "text": "Reduces log storage costs"
+      },
+      {
+        "key": "C",
+        "text": "Simplifies user access control"
+      },
+      {
+        "key": "D",
+        "text": "Enhances log searchability"
+      },
+      {
+        "key": "E",
+        "text": "Enables log aggregation by attributes"
+      }
+    ],
+    "answers": [
+      "A",
+      "D",
+      "E"
+    ],
+    "type": "multi",
+    "domain": "Log Analysis",
+    "topic": "Aggregations",
+    "topicCode": "LA2",
+    "sourcePage": 25,
+    "flags": []
+  },
+  {
+    "id": 98,
+    "prompt": "What are the capabilities of Datadog's log pipelines ? (Choose 3 answers)",
+    "options": [
+      {
+        "key": "A",
+        "text": "Enrich logs with additional metadata"
+      },
+      {
+        "key": "B",
+        "text": "Route logs to different destinations"
+      },
+      {
+        "key": "C",
+        "text": "Compress logs for storage efficiency"
+      },
+      {
+        "key": "D",
+        "text": "Schedule log archival tasks"
+      },
+      {
+        "key": "E",
+        "text": "Parse and transform logs"
+      }
+    ],
+    "answers": [
+      "A",
+      "B",
+      "E"
+    ],
+    "type": "multi",
+    "domain": "Log Collection",
+    "topic": "Processors & Pipelines",
+    "topicCode": "LC3",
+    "sourcePage": 26,
+    "flags": []
+  },
+  {
+    "id": 99,
+    "prompt": "Describe the process of installing a Datadog agent to collect logs.",
+    "options": [
+      {
+        "key": "A",
+        "text": "Sending logs via email"
+      },
+      {
+        "key": "B",
+        "text": "Downloading and installing the Datadog agent package"
+      },
+      {
+        "key": "C",
+        "text": "Using a USB drive"
+      },
+      {
+        "key": "D",
+        "text": "Installing a browser plugin"
+      }
+    ],
+    "answers": [
+      "B"
+    ],
+    "type": "single",
+    "domain": "Log Collection",
+    "topic": "Enabling Log Collection",
+    "topicCode": "LC1",
+    "sourcePage": 26,
+    "flags": []
+  },
+  {
+    "id": 100,
+    "prompt": "Machine learning algorithms are not used in log analysis with Datadog.",
+    "options": [
+      {
+        "key": "A",
+        "text": "True"
+      },
+      {
+        "key": "B",
+        "text": "False"
+      }
+    ],
+    "answers": [
+      "B"
+    ],
+    "type": "truefalse",
+    "domain": "Log Utilization",
+    "topic": "Monitors & Alerting",
+    "topicCode": "LU1",
+    "sourcePage": 26,
+    "flags": []
+  },
+  {
+    "id": 101,
+    "prompt": "What are the key metrics that can be derived from log data ?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Screen resolutions"
+      },
+      {
+        "key": "B",
+        "text": "Audio frequencies"
+      },
+      {
+        "key": "C",
+        "text": "Temperature readings"
+      },
+      {
+        "key": "D",
+        "text": "Error rates, response times, and user activities"
+      }
+    ],
+    "answers": [
+      "D"
+    ],
+    "type": "single",
+    "domain": "Log Utilization",
+    "topic": "Metric Generation",
+    "topicCode": "LU2",
+    "sourcePage": 26,
+    "flags": []
+  },
+  {
+    "id": 102,
+    "prompt": "Which option allows you to visualize trends in log data over time in Datadog ?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Metrics Explorer"
+      },
+      {
+        "key": "B",
+        "text": "Log Explorer"
+      },
+      {
+        "key": "C",
+        "text": "Service Map"
+      },
+      {
+        "key": "D",
+        "text": "Network Monitor"
+      }
+    ],
+    "answers": [
+      "B"
+    ],
+    "type": "single",
+    "domain": "Log Analysis",
+    "topic": "Visualizing",
+    "topicCode": "LA3",
+    "sourcePage": 27,
+    "flags": []
+  },
+  {
+    "id": 103,
+    "prompt": "Explain how to enable log collection for a specific service in Datadog.",
+    "options": [
+      {
+        "key": "A",
+        "text": "By restarting the computer"
+      },
+      {
+        "key": "B",
+        "text": "By configuring the service in the datadog.yaml file"
+      },
+      {
+        "key": "C",
+        "text": "By changing the monitor resolution"
+      },
+      {
+        "key": "D",
+        "text": "By disabling the firewall"
+      }
+    ],
+    "answers": [
+      "B"
+    ],
+    "type": "single",
+    "domain": "Log Collection",
+    "topic": "Enabling Log Collection",
+    "topicCode": "LC1",
+    "sourcePage": 27,
+    "flags": []
+  },
+  {
+    "id": 104,
+    "prompt": "Which of the following are benefits of using structured logging in Datadog ? (Choose 2 answers)",
+    "options": [
+      {
+        "key": "A",
+        "text": "Improved searchability and filterability"
+      },
+      {
+        "key": "B",
+        "text": "Reduced log file sizes"
+      },
+      {
+        "key": "C",
+        "text": "Simplified log analysis"
+      },
+      {
+        "key": "D",
+        "text": "Enhanced parsing capabilities"
+      }
+    ],
+    "answers": [
+      "A",
+      "D"
+    ],
+    "type": "multi",
+    "domain": "Logging Fundamentals",
+    "topic": "Logging Formats",
+    "topicCode": "LF2",
+    "sourcePage": 27,
+    "flags": []
+  },
+  {
+    "id": 105,
+    "prompt": "How can you filter logs in Datadog to only show logs from a specific host ?",
+    "options": [
+      {
+        "key": "A",
+        "text": "By deleting other logs"
+      },
+      {
+        "key": "B",
+        "text": "By changing the network settings"
+      },
+      {
+        "key": "C",
+        "text": "By using the search bar in the Log Explorer"
+      },
+      {
+        "key": "D",
+        "text": "By installing a different agent"
+      }
+    ],
+    "answers": [
+      "C"
+    ],
+    "type": "single",
+    "domain": "Log Analysis",
+    "topic": "Filtering and Excluding",
+    "topicCode": "LA1",
+    "sourcePage": 27,
+    "flags": []
+  },
+  {
+    "id": 106,
+    "prompt": "What is a grok parser, and how is it used in Datadog ?",
+    "options": [
+      {
+        "key": "A",
+        "text": "A tool to extract and structure log data based on patterns"
+      },
+      {
+        "key": "B",
+        "text": "A database management system"
+      },
+      {
+        "key": "C",
+        "text": "A spreadsheet software"
+      },
+      {
+        "key": "D",
+        "text": "A hardware device"
+      }
+    ],
+    "answers": [
+      "A"
+    ],
+    "type": "single",
+    "domain": "Log Collection",
+    "topic": "Processors & Pipelines",
+    "topicCode": "LC3",
+    "sourcePage": 28,
+    "flags": []
+  },
+  {
+    "id": 107,
+    "prompt": "Explain how to export logs from Datadog.",
+    "options": [
+      {
+        "key": "A",
+        "text": "By disabling log collection"
+      },
+      {
+        "key": "B",
+        "text": "By using email"
+      },
+      {
+        "key": "C",
+        "text": "By changing the screen resolution"
+      },
+      {
+        "key": "D",
+        "text": "By using the export functionality in the Datadog UI"
+      }
+    ],
+    "answers": [
+      "D"
+    ],
+    "type": "single",
+    "domain": "Log Utilization",
+    "topic": "Exporting",
+    "topicCode": "LU3",
+    "sourcePage": 28,
+    "flags": []
+  },
+  {
+    "id": 108,
+    "prompt": "What are the common formats supported by Datadog for log ingestion ? (Choose 4 answers)",
+    "options": [
+      {
+        "key": "A",
+        "text": "Binary"
+      },
+      {
+        "key": "B",
+        "text": "XML"
+      },
+      {
+        "key": "C",
+        "text": "JSON"
+      },
+      {
+        "key": "D",
+        "text": "Plaintext"
+      },
+      {
+        "key": "E",
+        "text": "CSV"
+      }
+    ],
+    "answers": [
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "type": "multi",
+    "domain": "Logging Fundamentals",
+    "topic": "Logging Formats",
+    "topicCode": "LF2",
+    "sourcePage": 28,
+    "flags": []
+  },
+  {
+    "id": 109,
+    "prompt": "What is a common use case for log-based alerts in Datadog ?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Changing desktop wallpaper"
+      },
+      {
+        "key": "B",
+        "text": "Updating software drivers"
+      },
+      {
+        "key": "C",
+        "text": "Monitoring CPU temperature"
+      },
+      {
+        "key": "D",
+        "text": "Detecting security incidents"
+      }
+    ],
+    "answers": [
+      "D"
+    ],
+    "type": "single",
+    "domain": "Log Utilization",
+    "topic": "Monitors & Alerting",
+    "topicCode": "LU1",
+    "sourcePage": 28,
+    "flags": []
+  },
+  {
+    "id": 110,
+    "prompt": "Datadog can only monitor logs from Docker containers and not from other containerization platforms.",
+    "options": [
+      {
+        "key": "A",
+        "text": "True"
+      },
+      {
+        "key": "B",
+        "text": "False"
+      }
+    ],
+    "answers": [
+      "B"
+    ],
+    "type": "truefalse",
+    "domain": "Log Collection",
+    "topic": "Enabling Log Collection",
+    "topicCode": "LC1",
+    "sourcePage": 28,
+    "flags": []
+  },
+  {
+    "id": 111,
+    "prompt": "Explain the process of setting up alerts based on log data.",
+    "options": [
+      {
+        "key": "A",
+        "text": "By using spreadsheet software"
+      },
+      {
+        "key": "B",
+        "text": "By configuring alert conditions in the Datadog UI"
+      },
+      {
+        "key": "C",
+        "text": "By disabling log collection"
+      },
+      {
+        "key": "D",
+        "text": "By changing the screen resolution"
+      }
+    ],
+    "answers": [
+      "B"
+    ],
+    "type": "single",
+    "domain": "Log Utilization",
+    "topic": "Monitors & Alerting",
+    "topicCode": "LU1",
+    "sourcePage": 29,
+    "flags": []
+  },
+  {
+    "id": 112,
+    "prompt": "What are the different types of alerts you can configure in Datadog ?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Email alerts only"
+      },
+      {
+        "key": "B",
+        "text": "Audio alerts"
+      },
+      {
+        "key": "C",
+        "text": "Log-based, metric-based, and event-based alerts"
+      },
+      {
+        "key": "D",
+        "text": "Hardware alerts"
+      }
+    ],
+    "answers": [
+      "C"
+    ],
+    "type": "single",
+    "domain": "Log Utilization",
+    "topic": "Monitors & Alerting",
+    "topicCode": "LU1",
+    "sourcePage": 29,
+    "flags": []
+  },
+  {
+    "id": 113,
+    "prompt": "Log retention policies in Datadog cannot be customized.",
+    "options": [
+      {
+        "key": "A",
+        "text": "True"
+      },
+      {
+        "key": "B",
+        "text": "False"
+      }
+    ],
+    "answers": [
+      "B"
+    ],
+    "type": "truefalse",
+    "domain": "Additional Topics",
+    "topic": "Retention, Archives & Rehydration",
+    "topicCode": "X1",
+    "sourcePage": 29,
+    "flags": []
+  },
+  {
+    "id": 114,
+    "prompt": "How do you create a log-based metric in Datadog ?",
+    "options": [
+      {
+        "key": "A",
+        "text": "By using external software"
+      },
+      {
+        "key": "B",
+        "text": "By updating the operating system"
+      },
+      {
+        "key": "C",
+        "text": "By defining a metric in the log processing pipeline"
+      },
+      {
+        "key": "D",
+        "text": "By modifying system files"
+      }
+    ],
+    "answers": [
+      "C"
+    ],
+    "type": "single",
+    "domain": "Log Utilization",
+    "topic": "Metric Generation",
+    "topicCode": "LU2",
+    "sourcePage": 29,
+    "flags": []
+  },
+  {
+    "id": 115,
+    "prompt": "Which steps can help ensure the accuracy of log data collected by Datadog ? (Choose 3 answers)",
+    "options": [
+      {
+        "key": "A",
+        "text": "Regularly validate log source configurations"
+      },
+      {
+        "key": "B",
+        "text": "Implement network monitoring"
+      },
+      {
+        "key": "C",
+        "text": "Enable auto-scaling for log collection infrastructure"
+      },
+      {
+        "key": "D",
+        "text": "Monitor log ingestion errors"
+      },
+      {
+        "key": "E",
+        "text": "Use structured logging formats"
+      }
+    ],
+    "answers": [
+      "A",
+      "D",
+      "E"
+    ],
+    "type": "multi",
+    "domain": "Log Troubleshooting",
+    "topic": "Ingestion Issues",
+    "topicCode": "LT1",
+    "sourcePage": 30,
+    "flags": []
+  },
+  {
+    "id": 116,
+    "prompt": "Describe how to create a custom grok parser in Datadog.",
+    "options": [
+      {
+        "key": "A",
+        "text": "By changing the screen resolution"
+      },
+      {
+        "key": "B",
+        "text": "By creating a new email account"
+      },
+      {
+        "key": "C",
+        "text": "By installing additional software"
+      },
+      {
+        "key": "D",
+        "text": "By defining patterns in the Datadog UI or configuration files"
+      }
+    ],
+    "answers": [
+      "D"
+    ],
+    "type": "single",
+    "domain": "Log Collection",
+    "topic": "Processors & Pipelines",
+    "topicCode": "LC3",
+    "sourcePage": 30,
+    "flags": []
+  },
+  {
+    "id": 117,
+    "prompt": "When configuring log retention policies in Datadog, which factors should you consider ? (Choose 3 answers)",
+    "options": [
+      {
+        "key": "A",
+        "text": "Performance impact"
+      },
+      {
+        "key": "B",
+        "text": "Storage costs"
+      },
+      {
+        "key": "C",
+        "text": "Log file sizes"
+      },
+      {
+        "key": "D",
+        "text": "Compliance requirements"
+      }
+    ],
+    "answers": [
+      "A",
+      "B",
+      "D"
+    ],
+    "type": "multi",
+    "domain": "Additional Topics",
+    "topic": "Retention, Archives & Rehydration",
+    "topicCode": "X1",
+    "sourcePage": 30,
+    "flags": []
+  },
+  {
+    "id": 118,
+    "prompt": "How do you set up log retention policies in Datadog ?",
+    "options": [
+      {
+        "key": "A",
+        "text": "By changing network settings"
+      },
+      {
+        "key": "B",
+        "text": "By using a text editor"
+      },
+      {
+        "key": "C",
+        "text": "By disabling log collection"
+      },
+      {
+        "key": "D",
+        "text": "By configuring retention settings in the Datadog UI"
+      }
+    ],
+    "answers": [
+      "D"
+    ],
+    "type": "single",
+    "domain": "Additional Topics",
+    "topic": "Retention, Archives & Rehydration",
+    "topicCode": "X1",
+    "sourcePage": 30,
+    "flags": []
+  },
+  {
+    "id": 119,
+    "prompt": "Which of the following are methods for exporting logs from Datadog ? (Choose 3 answers)",
+    "options": [
+      {
+        "key": "A",
+        "text": "Forwarding logs to an external storage system"
+      },
+      {
+        "key": "B",
+        "text": "Using the Datadog API"
+      },
+      {
+        "key": "C",
+        "text": "Generating downloadable log reports"
+      },
+      {
+        "key": "D",
+        "text": "Sending logs via email"
+      }
+    ],
+    "answers": [
+      "A",
+      "B",
+      "C"
+    ],
+    "type": "multi",
+    "domain": "Log Utilization",
+    "topic": "Exporting",
+    "topicCode": "LU3",
+    "sourcePage": 31,
+    "flags": []
+  },
+  {
+    "id": 120,
+    "prompt": "Explain how to use facets to filter and analyze logs.",
+    "options": [
+      {
+        "key": "A",
+        "text": "By using predefined fields to narrow down log data"
+      },
+      {
+        "key": "B",
+        "text": "By changing network settings"
+      },
+      {
+        "key": "C",
+        "text": "By using spreadsheet software"
+      },
+      {
+        "key": "D",
+        "text": "By disabling log collection"
+      }
+    ],
+    "answers": [
+      "A"
+    ],
+    "type": "single",
+    "domain": "Log Analysis",
+    "topic": "Filtering and Excluding",
+    "topicCode": "LA1",
+    "sourcePage": 31,
+    "flags": []
+  },
+  {
+    "id": 121,
+    "prompt": "Log-based monitors in Datadog allow you to define conditions for generating alerts based on log data.",
+    "options": [
+      {
+        "key": "A",
+        "text": "True"
+      },
+      {
+        "key": "B",
+        "text": "False"
+      }
+    ],
+    "answers": [
+      "A"
+    ],
+    "type": "truefalse",
+    "domain": "Log Utilization",
+    "topic": "Monitors & Alerting",
+    "topicCode": "LU1",
+    "sourcePage": 31,
+    "flags": []
+  },
+  {
+    "id": 122,
+    "prompt": "In Datadog, what are common methods for log enrichment ? (Choose 3 answers)",
+    "options": [
+      {
+        "key": "A",
+        "text": "Encrypting log data"
+      },
+      {
+        "key": "B",
+        "text": "Using processors"
+      },
+      {
+        "key": "C",
+        "text": "Adding metadata"
+      },
+      {
+        "key": "D",
+        "text": "Applying regular expressions"
+      }
+    ],
+    "answers": [
+      "B",
+      "C",
+      "D"
+    ],
+    "type": "multi",
+    "domain": "Log Collection",
+    "topic": "Processors & Pipelines",
+    "topicCode": "LC3",
+    "sourcePage": 31,
+    "flags": []
+  },
+  {
+    "id": 123,
+    "prompt": "You can use Datadog APIs to automate log management tasks.",
+    "options": [
+      {
+        "key": "A",
+        "text": "True"
+      },
+      {
+        "key": "B",
+        "text": "False"
+      }
+    ],
+    "answers": [
+      "A"
+    ],
+    "type": "truefalse",
+    "domain": "Additional Topics",
+    "topic": "Cross-product, architecture & APIs",
+    "topicCode": "X3",
+    "sourcePage": 31,
+    "flags": []
+  },
+  {
+    "id": 124,
+    "prompt": "Which of the following are benefits of using notebooks for log analysis in Datadog ? (Choose 3 answers)",
+    "options": [
+      {
+        "key": "A",
+        "text": "Interactive exploration of log data"
+      },
+      {
+        "key": "B",
+        "text": "Integration with third-party analytics tools"
+      },
+      {
+        "key": "C",
+        "text": "Collaboration and sharing of analysis workflows"
+      },
+      {
+        "key": "D",
+        "text": "Ability to create custom visualizations"
+      }
+    ],
+    "answers": [
+      "A",
+      "C",
+      "D"
+    ],
+    "type": "multi",
+    "domain": "Log Analysis",
+    "topic": "Visualizing",
+    "topicCode": "LA3",
+    "sourcePage": 32,
+    "flags": []
+  },
+  {
+    "id": 125,
+    "prompt": "Facets in the Log Explorer are used to create custom views for log analysis.",
+    "options": [
+      {
+        "key": "A",
+        "text": "False"
+      },
+      {
+        "key": "B",
+        "text": "True"
+      }
+    ],
+    "answers": [
+      "B"
+    ],
+    "type": "truefalse",
+    "domain": "Log Searching & Filtering",
+    "topic": "Explorer Functionality",
+    "topicCode": "SF3",
+    "sourcePage": 32,
+    "flags": []
+  },
+  {
+    "id": 126,
+    "prompt": "What is the role of the datadog.yaml file in log management ?",
+    "options": [
+      {
+        "key": "A",
+        "text": "To store user passwords"
+      },
+      {
+        "key": "B",
+        "text": "To send notifications"
+      },
+      {
+        "key": "C",
+        "text": "To design dashboards"
+      },
+      {
+        "key": "D",
+        "text": "To configure log sources and agent settings"
+      }
+    ],
+    "answers": [
+      "D"
+    ],
+    "type": "single",
+    "domain": "Log Collection",
+    "topic": "Enabling Log Collection",
+    "topicCode": "LC1",
+    "sourcePage": 32,
+    "flags": []
+  },
+  {
+    "id": 127,
+    "prompt": "Which of the following are benefits of using structured logging ? (Choose 3 answers)",
+    "options": [
+      {
+        "key": "A",
+        "text": "Facilitates easier search and filtering"
+      },
+      {
+        "key": "B",
+        "text": "Enhances readability of log data"
+      },
+      {
+        "key": "C",
+        "text": "Allows for easier integration with third-party tools"
+      },
+      {
+        "key": "D",
+        "text": "Enables better correlation of log events"
+      }
+    ],
+    "answers": [
+      "A",
+      "B",
+      "D"
+    ],
+    "type": "multi",
+    "domain": "Logging Fundamentals",
+    "topic": "Logging Formats",
+    "topicCode": "LF2",
+    "sourcePage": 32,
+    "flags": []
+  },
+  {
+    "id": 128,
+    "prompt": "Describe how to create a log-based monitor.",
+    "options": [
+      {
+        "key": "A",
+        "text": "By disabling log collection"
+      },
+      {
+        "key": "B",
+        "text": "By changing the desktop wallpaper"
+      },
+      {
+        "key": "C",
+        "text": "By using a text editor"
+      },
+      {
+        "key": "D",
+        "text": "By defining conditions in the Datadog UI"
+      }
+    ],
+    "answers": [
+      "D"
+    ],
+    "type": "single",
+    "domain": "Log Utilization",
+    "topic": "Monitors & Alerting",
+    "topicCode": "LU1",
+    "sourcePage": 33,
+    "flags": []
+  },
+  {
+    "id": 129,
+    "prompt": "How can you create a custom view in the Log Explorer ?",
+    "options": [
+      {
+        "key": "A",
+        "text": "By setting filters and saving the view in the Datadog UI"
+      },
+      {
+        "key": "B",
+        "text": "By modifying system files"
+      },
+      {
+        "key": "C",
+        "text": "By updating the operating system"
+      },
+      {
+        "key": "D",
+        "text": "By using external software"
+      }
+    ],
+    "answers": [
+      "A"
+    ],
+    "type": "single",
+    "domain": "Log Searching & Filtering",
+    "topic": "Explorer Functionality",
+    "topicCode": "SF3",
+    "sourcePage": 33,
+    "flags": []
+  },
+  {
+    "id": 130,
+    "prompt": "Log-based metrics in Datadog allow you to monitor business-specific KPIs derived from log data.",
+    "options": [
+      {
+        "key": "A",
+        "text": "True"
+      },
+      {
+        "key": "B",
+        "text": "False"
+      }
+    ],
+    "answers": [
+      "A"
+    ],
+    "type": "truefalse",
+    "domain": "Log Utilization",
+    "topic": "Metric Generation",
+    "topicCode": "LU2",
+    "sourcePage": 33,
+    "flags": []
+  },
+  {
+    "id": 131,
+    "prompt": "Explain the concept of log parsing in Datadog.",
+    "options": [
+      {
+        "key": "A",
+        "text": "Encrypting log data"
+      },
+      {
+        "key": "B",
+        "text": "Rearranging log files"
+      },
+      {
+        "key": "C",
+        "text": "Extracting structured data from unstructured log entries"
+      },
+      {
+        "key": "D",
+        "text": "Creating new user interfaces"
+      }
+    ],
+    "answers": [
+      "C"
+    ],
+    "type": "single",
+    "domain": "Log Collection",
+    "topic": "Processors & Pipelines",
+    "topicCode": "LC3",
+    "sourcePage": 33,
+    "flags": []
+  },
+  {
+    "id": 132,
+    "prompt": "What is the primary purpose of log management in Datadog ?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Log analysis and monitoring"
+      },
+      {
+        "key": "B",
+        "text": "Performance monitoring"
+      },
+      {
+        "key": "C",
+        "text": "User management"
+      },
+      {
+        "key": "D",
+        "text": "Data storage"
+      }
+    ],
+    "answers": [
+      "A"
+    ],
+    "type": "single",
+    "domain": "Logging Fundamentals",
+    "topic": "Logging Systems – Rationale & Justification",
+    "topicCode": "LF1",
+    "sourcePage": 34,
+    "flags": []
+  },
+  {
+    "id": 133,
+    "prompt": "Log archives in Datadog are not encrypted for security reasons.",
+    "options": [
+      {
+        "key": "A",
+        "text": "True"
+      },
+      {
+        "key": "B",
+        "text": "False"
+      }
+    ],
+    "answers": [
+      "B"
+    ],
+    "type": "truefalse",
+    "domain": "Additional Topics",
+    "topic": "Retention, Archives & Rehydration",
+    "topicCode": "X1",
+    "sourcePage": 34,
+    "flags": []
+  },
+  {
+    "id": 134,
+    "prompt": "How do you set up structured logging in Datadog ?",
+    "options": [
+      {
+        "key": "A",
+        "text": "By configuring log formats and sources to produce structured data"
+      },
+      {
+        "key": "B",
+        "text": "By using text editors"
+      },
+      {
+        "key": "C",
+        "text": "By disabling log collection"
+      },
+      {
+        "key": "D",
+        "text": "By changing the desktop wallpaper"
+      }
+    ],
+    "answers": [
+      "A"
+    ],
+    "type": "single",
+    "domain": "Logging Fundamentals",
+    "topic": "Logging Formats",
+    "topicCode": "LF2",
+    "sourcePage": 34,
+    "flags": []
+  },
+  {
+    "id": 135,
+    "prompt": "In Datadog, what is a measure used for ? (Choose 2 answers)",
+    "options": [
+      {
+        "key": "A",
+        "text": "To define thresholds for log alerts"
+      },
+      {
+        "key": "B",
+        "text": "To monitor the volume of logs"
+      },
+      {
+        "key": "C",
+        "text": "To create custom log-based metrics"
+      },
+      {
+        "key": "D",
+        "text": "To visualize log data in dashboards"
+      }
+    ],
+    "answers": [
+      "C",
+      "D"
+    ],
+    "type": "multi",
+    "domain": "Log Analysis",
+    "topic": "Aggregations",
+    "topicCode": "LA2",
+    "sourcePage": 34,
+    "flags": []
+  },
+  {
+    "id": 136,
+    "prompt": "Which language is primarily used for writing Datadog log queries ?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Lucene Query Language"
+      },
+      {
+        "key": "B",
+        "text": "Python"
+      },
+      {
+        "key": "C",
+        "text": "KQL (Kusto Query Language)"
+      },
+      {
+        "key": "D",
+        "text": "SQL"
+      }
+    ],
+    "answers": [
+      "A"
+    ],
+    "type": "single",
+    "domain": "Log Searching & Filtering",
+    "topic": "Search Syntax",
+    "topicCode": "SF2",
+    "sourcePage": 34,
+    "flags": []
+  },
+  {
+    "id": 137,
+    "prompt": "What are the benefits of using structured logging ?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Increases the complexity of log data"
+      },
+      {
+        "key": "B",
+        "text": "Improves network speed"
+      },
+      {
+        "key": "C",
+        "text": "Makes it easier to search, filter, and analyze log data"
+      },
+      {
+        "key": "D",
+        "text": "Reduces log file sizes"
+      }
+    ],
+    "answers": [
+      "C"
+    ],
+    "type": "single",
+    "domain": "Logging Fundamentals",
+    "topic": "Logging Formats",
+    "topicCode": "LF2",
+    "sourcePage": 35,
+    "flags": []
+  },
+  {
+    "id": 138,
+    "prompt": "What is the function of the Datadog Log Explorer ?",
+    "options": [
+      {
+        "key": "A",
+        "text": "To configure hardware settings"
+      },
+      {
+        "key": "B",
+        "text": "To search, filter, and analyze log data"
+      },
+      {
+        "key": "C",
+        "text": "To play multimedia files"
+      },
+      {
+        "key": "D",
+        "text": "To browse the internet"
+      }
+    ],
+    "answers": [
+      "B"
+    ],
+    "type": "single",
+    "domain": "Log Searching & Filtering",
+    "topic": "Explorer Functionality",
+    "topicCode": "SF3",
+    "sourcePage": 35,
+    "flags": []
+  },
+  {
+    "id": 139,
+    "prompt": "Which of the following integrations are supported by Datadog for log management ? (Choose 3 answers)",
+    "options": [
+      {
+        "key": "A",
+        "text": "MongoDB Atlas"
+      },
+      {
+        "key": "B",
+        "text": "AWS CloudTrail"
+      },
+      {
+        "key": "C",
+        "text": "Google Cloud Logging"
+      },
+      {
+        "key": "D",
+        "text": "Azure Monitor"
+      }
+    ],
+    "answers": [
+      "A",
+      "C",
+      "D"
+    ],
+    "type": "multi",
+    "domain": "Log Collection",
+    "topic": "Enabling Log Collection",
+    "topicCode": "LC1",
+    "sourcePage": 35,
+    "flags": []
+  },
+  {
+    "id": 140,
+    "prompt": "What is the purpose of log processing in Datadog ?",
+    "options": [
+      {
+        "key": "A",
+        "text": "To create user accounts"
+      },
+      {
+        "key": "B",
+        "text": "To generate random data"
+      },
+      {
+        "key": "C",
+        "text": "To transform, enrich, and filter log data"
+      },
+      {
+        "key": "D",
+        "text": "To delete old logs"
+      }
+    ],
+    "answers": [
+      "C"
+    ],
+    "type": "single",
+    "domain": "Log Collection",
+    "topic": "Processors & Pipelines",
+    "topicCode": "LC3",
+    "sourcePage": 35,
+    "flags": []
+  },
+  {
+    "id": 141,
+    "prompt": "Describe the steps to create a custom log pipeline.",
+    "options": [
+      {
+        "key": "A",
+        "text": "By configuring email settings"
+      },
+      {
+        "key": "B",
+        "text": "By writing SQL queries"
+      },
+      {
+        "key": "C",
+        "text": "By updating the operating system"
+      },
+      {
+        "key": "D",
+        "text": "By setting up pipeline rules and processors in the Datadog UI"
+      }
+    ],
+    "answers": [
+      "D"
+    ],
+    "type": "single",
+    "domain": "Log Collection",
+    "topic": "Processors & Pipelines",
+    "topicCode": "LC3",
+    "sourcePage": 36,
+    "flags": []
+  },
+  {
+    "id": 142,
+    "prompt": "What is the function of log rehydration in Datadog ?",
+    "options": [
+      {
+        "key": "A",
+        "text": "To convert logs into metrics"
+      },
+      {
+        "key": "B",
+        "text": "To compress log data"
+      },
+      {
+        "key": "C",
+        "text": "To restore archived logs for analysis"
+      },
+      {
+        "key": "D",
+        "text": "To delete old logs"
+      }
+    ],
+    "answers": [
+      "C"
+    ],
+    "type": "single",
+    "domain": "Additional Topics",
+    "topic": "Retention, Archives & Rehydration",
+    "topicCode": "X1",
+    "sourcePage": 36,
+    "flags": []
+  },
+  {
+    "id": 143,
+    "prompt": "How do you use processors to enrich log data in Datadog ?",
+    "options": [
+      {
+        "key": "A",
+        "text": "By editing HTML files"
+      },
+      {
+        "key": "B",
+        "text": "By using social media"
+      },
+      {
+        "key": "C",
+        "text": "By adding processors in the log pipeline"
+      },
+      {
+        "key": "D",
+        "text": "By configuring Bluetooth settings"
+      }
+    ],
+    "answers": [
+      "C"
+    ],
+    "type": "single",
+    "domain": "Log Collection",
+    "topic": "Processors & Pipelines",
+    "topicCode": "LC3",
+    "sourcePage": 36,
+    "flags": []
+  },
+  {
+    "id": 144,
+    "prompt": "Describe how to create a new measure in Datadog.",
+    "options": [
+      {
+        "key": "A",
+        "text": "By using a text editor"
+      },
+      {
+        "key": "B",
+        "text": "By disabling log collection"
+      },
+      {
+        "key": "C",
+        "text": "By changing the desktop wallpaper"
+      },
+      {
+        "key": "D",
+        "text": "By defining a numeric field in the log processing pipeline"
+      }
+    ],
+    "answers": [
+      "D"
+    ],
+    "type": "single",
+    "domain": "Log Analysis",
+    "topic": "Aggregations",
+    "topicCode": "LA2",
+    "sourcePage": 36,
+    "flags": []
+  },
+  {
+    "id": 145,
+    "prompt": "Grok parsers in Datadog are used to encrypt log data.",
+    "options": [
+      {
+        "key": "A",
+        "text": "True"
+      },
+      {
+        "key": "B",
+        "text": "False"
+      }
+    ],
+    "answers": [
+      "B"
+    ],
+    "type": "truefalse",
+    "domain": "Log Collection",
+    "topic": "Processors & Pipelines",
+    "topicCode": "LC3",
+    "sourcePage": 37,
+    "flags": []
+  },
+  {
+    "id": 146,
+    "prompt": "What are measures, and how are they used in log management ?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Audio settings"
+      },
+      {
+        "key": "B",
+        "text": "Colors used in the UI"
+      },
+      {
+        "key": "C",
+        "text": "Numeric values extracted from logs for monitoring and alerting"
+      },
+      {
+        "key": "D",
+        "text": "Physical dimensions"
+      }
+    ],
+    "answers": [
+      "C"
+    ],
+    "type": "single",
+    "domain": "Log Analysis",
+    "topic": "Aggregations",
+    "topicCode": "LA2",
+    "sourcePage": 37,
+    "flags": []
+  },
+  {
+    "id": 147,
+    "prompt": "What is a log pipeline in Datadog ?",
+    "options": [
+      {
+        "key": "A",
+        "text": "A method for encrypting logs"
+      },
+      {
+        "key": "B",
+        "text": "A sequence of steps to process and filter logs"
+      },
+      {
+        "key": "C",
+        "text": "A backup mechanism"
+      },
+      {
+        "key": "D",
+        "text": "A water transport system"
+      }
+    ],
+    "answers": [
+      "B"
+    ],
+    "type": "single",
+    "domain": "Log Collection",
+    "topic": "Processors & Pipelines",
+    "topicCode": "LC3",
+    "sourcePage": 37,
+    "flags": []
+  },
+  {
+    "id": 148,
+    "prompt": "Which integrations can Datadog use to collect logs ? (Choose the answers you think are correct)",
+    "options": [
+      {
+        "key": "A",
+        "text": "Docker"
+      },
+      {
+        "key": "B",
+        "text": "Fluentd"
+      },
+      {
+        "key": "C",
+        "text": "Elasticsearch"
+      },
+      {
+        "key": "D",
+        "text": "AWS CloudWatch"
+      }
+    ],
+    "answers": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "type": "multi",
+    "domain": "Log Collection",
+    "topic": "Enabling Log Collection",
+    "topicCode": "LC1",
+    "sourcePage": 37,
+    "flags": []
+  },
+  {
+    "id": 149,
+    "prompt": "What are common processors used in log processing pipelines ? (Choose 2 answers)",
+    "options": [
+      {
+        "key": "A",
+        "text": "Rename"
+      },
+      {
+        "key": "B",
+        "text": "Grok"
+      },
+      {
+        "key": "C",
+        "text": "Tag"
+      },
+      {
+        "key": "D",
+        "text": "JSON Parser"
+      }
+    ],
+    "answers": [
+      "A",
+      "B",
+      "D"
+    ],
+    "type": "multi",
+    "domain": "Log Collection",
+    "topic": "Processors & Pipelines",
+    "topicCode": "LC3",
+    "sourcePage": 37,
+    "flags": [
+      "Says choose 2; key has 3"
+    ]
+  },
+  {
+    "id": 150,
+    "prompt": "How do you configure log sources in Datadog ?",
+    "options": [
+      {
+        "key": "A",
+        "text": "By creating a new email address"
+      },
+      {
+        "key": "B",
+        "text": "By modifying the datadog.yaml file"
+      },
+      {
+        "key": "C",
+        "text": "By using a mobile app"
+      },
+      {
+        "key": "D",
+        "text": "By using SQL queries"
+      }
+    ],
+    "answers": [
+      "B"
+    ],
+    "type": "single",
+    "domain": "Log Collection",
+    "topic": "Enabling Log Collection",
+    "topicCode": "LC1",
+    "sourcePage": 38,
+    "flags": []
+  },
+  {
+    "id": 151,
+    "prompt": "Which integrations are commonly used for shipping logs to Datadog from cloud platforms ? (Choose 4 answers)",
+    "options": [
+      {
+        "key": "A",
+        "text": "AWS CloudWatch Logs"
+      },
+      {
+        "key": "B",
+        "text": "Azure Monitor Logs"
+      },
+      {
+        "key": "C",
+        "text": "Google Cloud Logging"
+      },
+      {
+        "key": "D",
+        "text": "Heroku Logplex"
+      },
+      {
+        "key": "E",
+        "text": "IBM Cloud Logging"
+      }
+    ],
+    "answers": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "type": "multi",
+    "domain": "Log Collection",
+    "topic": "Enabling Log Collection",
+    "topicCode": "LC1",
+    "sourcePage": 38,
+    "flags": []
+  },
+  {
+    "id": 152,
+    "prompt": "How can you monitor log volume and set limits in Datadog ?",
+    "options": [
+      {
+        "key": "A",
+        "text": "By using spreadsheet software"
+      },
+      {
+        "key": "B",
+        "text": "By disabling log collection"
+      },
+      {
+        "key": "C",
+        "text": "By changing network settings"
+      },
+      {
+        "key": "D",
+        "text": "By using the log volume monitoring features and setting limits in the Datadog UI"
+      }
+    ],
+    "answers": [
+      "D"
+    ],
+    "type": "single",
+    "domain": "Additional Topics",
+    "topic": "Cross-product, architecture & APIs",
+    "topicCode": "X3",
+    "sourcePage": 38,
+    "flags": []
+  },
+  {
+    "id": 153,
+    "prompt": "What is the role of the Log Processing Pipeline in Datadog ?",
+    "options": [
+      {
+        "key": "A",
+        "text": "To transform and enrich log data"
+      },
+      {
+        "key": "B",
+        "text": "To manage databases"
+      },
+      {
+        "key": "C",
+        "text": "To monitor user activity"
+      },
+      {
+        "key": "D",
+        "text": "To update software"
+      }
+    ],
+    "answers": [
+      "A"
+    ],
+    "type": "single",
+    "domain": "Log Collection",
+    "topic": "Processors & Pipelines",
+    "topicCode": "LC3",
+    "sourcePage": 38,
+    "flags": []
+  },
+  {
+    "id": 154,
+    "prompt": "How can you create a log analytics dashboard in Datadog ?",
+    "options": [
+      {
+        "key": "A",
+        "text": "By using the dashboard creation tools in the Datadog UI"
+      },
+      {
+        "key": "B",
+        "text": "By disabling log collection"
+      },
+      {
+        "key": "C",
+        "text": "By using spreadsheet software"
+      },
+      {
+        "key": "D",
+        "text": "By changing the screen resolution"
+      }
+    ],
+    "answers": [
+      "A"
+    ],
+    "type": "single",
+    "domain": "Log Analysis",
+    "topic": "Visualizing",
+    "topicCode": "LA3",
+    "sourcePage": 39,
+    "flags": []
+  },
+  {
+    "id": 155,
+    "prompt": "Describe how to visualize log data using Datadog dashboards.",
+    "options": [
+      {
+        "key": "A",
+        "text": "By configuring hardware settings"
+      },
+      {
+        "key": "B",
+        "text": "By changing desktop wallpaper"
+      },
+      {
+        "key": "C",
+        "text": "By creating custom widgets and dashboards in the Datadog UI"
+      },
+      {
+        "key": "D",
+        "text": "By playing multimedia files"
+      }
+    ],
+    "answers": [
+      "C"
+    ],
+    "type": "single",
+    "domain": "Log Analysis",
+    "topic": "Visualizing",
+    "topicCode": "LA3",
+    "sourcePage": 39,
+    "flags": []
+  },
+  {
+    "id": 156,
+    "prompt": "Which integrations can Datadog use to collect logs ? (Choose 4 answers)",
+    "options": [
+      {
+        "key": "A",
+        "text": "Elasticsearch"
+      },
+      {
+        "key": "B",
+        "text": "Apache Kafka"
+      },
+      {
+        "key": "C",
+        "text": "AWS CloudWatch"
+      },
+      {
+        "key": "D",
+        "text": "Fluentd"
+      },
+      {
+        "key": "E",
+        "text": "Docker"
+      }
+    ],
+    "answers": [
+      "A",
+      "C",
+      "D",
+      "E"
+    ],
+    "type": "multi",
+    "domain": "Log Collection",
+    "topic": "Enabling Log Collection",
+    "topicCode": "LC1",
+    "sourcePage": 39,
+    "flags": []
+  },
+  {
+    "id": 157,
+    "prompt": "Which feature allows you to visualize log data in Datadog ?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Log Explorer"
+      },
+      {
+        "key": "B",
+        "text": "User Manager"
+      },
+      {
+        "key": "C",
+        "text": "Configuration Manager"
+      },
+      {
+        "key": "D",
+        "text": "Network Monitor"
+      }
+    ],
+    "answers": [
+      "A"
+    ],
+    "type": "single",
+    "domain": "Log Analysis",
+    "topic": "Visualizing",
+    "topicCode": "LA3",
+    "sourcePage": 39,
+    "flags": []
+  },
+  {
+    "id": 158,
+    "prompt": "What are the best practices for log retention and archiving ?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Deleting all logs after a week"
+      },
+      {
+        "key": "B",
+        "text": "Setting appropriate retention periods and using secure storage for archives"
+      },
+      {
+        "key": "C",
+        "text": "Changing desktop wallpaper frequently"
+      },
+      {
+        "key": "D",
+        "text": "Disabling log collection"
+      }
+    ],
+    "answers": [
+      "B"
+    ],
+    "type": "single",
+    "domain": "Additional Topics",
+    "topic": "Retention, Archives & Rehydration",
+    "topicCode": "X1",
+    "sourcePage": 40,
+    "flags": []
+  },
+  {
+    "id": 159,
+    "prompt": "Describe the use of machine learning in log analysis with Datadog.",
+    "options": [
+      {
+        "key": "A",
+        "text": "By changing the screen resolution"
+      },
+      {
+        "key": "B",
+        "text": "By leveraging machine learning algorithms to identify patterns and anomalies in log data"
+      },
+      {
+        "key": "C",
+        "text": "By playing multimedia files"
+      },
+      {
+        "key": "D",
+        "text": "By using spreadsheet software"
+      }
+    ],
+    "answers": [
+      "B"
+    ],
+    "type": "single",
+    "domain": "Log Utilization",
+    "topic": "Monitors & Alerting",
+    "topicCode": "LU1",
+    "sourcePage": 40,
+    "flags": []
+  },
+  {
+    "id": 160,
+    "prompt": "What are the recommended best practices for log retention and archiving in Datadog ? (Choose 3 answers)",
+    "options": [
+      {
+        "key": "A",
+        "text": "Regularly delete logs older than 30 days"
+      },
+      {
+        "key": "B",
+        "text": "Monitor archive storage usage and performance"
+      },
+      {
+        "key": "C",
+        "text": "Encrypt archived logs for security"
+      },
+      {
+        "key": "D",
+        "text": "Implement strict access controls for archived logs"
+      },
+      {
+        "key": "E",
+        "text": "Avoid using log retention altogether"
+      }
+    ],
+    "answers": [
+      "B",
+      "C",
+      "D"
+    ],
+    "type": "multi",
+    "domain": "Additional Topics",
+    "topic": "Retention, Archives & Rehydration",
+    "topicCode": "X1",
+    "sourcePage": 40,
+    "flags": []
+  },
+  {
+    "id": 161,
+    "prompt": "What is the primary purpose of the Datadog Agent ?",
+    "options": [
+      {
+        "key": "A",
+        "text": "To collect and send metrics and logs to Datadog"
+      },
+      {
+        "key": "B",
+        "text": "To monitor network speed"
+      },
+      {
+        "key": "C",
+        "text": "To change desktop wallpaper"
+      },
+      {
+        "key": "D",
+        "text": "To manage user access"
+      }
+    ],
+    "answers": [
+      "A"
+    ],
+    "type": "single",
+    "domain": "Log Collection",
+    "topic": "Enabling Log Collection",
+    "topicCode": "LC1",
+    "sourcePage": 40,
+    "flags": []
+  },
+  {
+    "id": 162,
+    "prompt": "How do you troubleshoot missing logs in Datadog ?",
+    "options": [
+      {
+        "key": "A",
+        "text": "By checking agent status, configuration, and network connectivity"
+      },
+      {
+        "key": "B",
+        "text": "By updating the operating system"
+      },
+      {
+        "key": "C",
+        "text": "By changing the screen resolution"
+      },
+      {
+        "key": "D",
+        "text": "By managing user access"
+      }
+    ],
+    "answers": [
+      "A"
+    ],
+    "type": "single",
+    "domain": "Log Troubleshooting",
+    "topic": "Ingestion Issues",
+    "topicCode": "LT1",
+    "sourcePage": 41,
+    "flags": []
+  },
+  {
+    "id": 163,
+    "prompt": "What is the purpose of the Datadog Audit Trail feature ?",
+    "options": [
+      {
+        "key": "A",
+        "text": "To track changes and actions taken within Datadog"
+      },
+      {
+        "key": "B",
+        "text": "To play multimedia files"
+      },
+      {
+        "key": "C",
+        "text": "To configure hardware settings"
+      },
+      {
+        "key": "D",
+        "text": "To change desktop wallpaper"
+      }
+    ],
+    "answers": [
+      "A"
+    ],
+    "type": "single",
+    "domain": "Additional Topics",
+    "topic": "Security, RBAC & Audit Trail",
+    "topicCode": "X2",
+    "sourcePage": 41,
+    "flags": []
+  },
+  {
+    "id": 164,
+    "prompt": "Structured logging makes it harder to search, filter, and analyze log data.",
+    "options": [
+      {
+        "key": "A",
+        "text": "True"
+      },
+      {
+        "key": "B",
+        "text": "False"
+      }
+    ],
+    "answers": [
+      "B"
+    ],
+    "type": "truefalse",
+    "domain": "Logging Fundamentals",
+    "topic": "Logging Formats",
+    "topicCode": "LF2",
+    "sourcePage": 41,
+    "flags": []
+  },
+  {
+    "id": 165,
+    "prompt": "Datadog can only collect logs from local files and cannot integrate with other platforms.",
+    "options": [
+      {
+        "key": "A",
+        "text": "False"
+      },
+      {
+        "key": "B",
+        "text": "True"
+      }
+    ],
+    "answers": [
+      "A"
+    ],
+    "type": "truefalse",
+    "domain": "Log Collection",
+    "topic": "Enabling Log Collection",
+    "topicCode": "LC1",
+    "sourcePage": 41,
+    "flags": []
+  },
+  {
+    "id": 166,
+    "prompt": "How do you enable log collection from Docker containers in Datadog ?",
+    "options": [
+      {
+        "key": "A",
+        "text": "By changing the screen resolution"
+      },
+      {
+        "key": "B",
+        "text": "By updating the operating system"
+      },
+      {
+        "key": "C",
+        "text": "By configuring network settings"
+      },
+      {
+        "key": "D",
+        "text": "By setting up the Datadog Agent to collect Docker logs"
+      }
+    ],
+    "answers": [
+      "D"
+    ],
+    "type": "single",
+    "domain": "Log Collection",
+    "topic": "Enabling Log Collection",
+    "topicCode": "LC1",
+    "sourcePage": 42,
+    "flags": []
+  },
+  {
+    "id": 167,
+    "prompt": "Anomaly detection in log data involves identifying normal patterns and deviations.",
+    "options": [
+      {
+        "key": "A",
+        "text": "True"
+      },
+      {
+        "key": "B",
+        "text": "False"
+      }
+    ],
+    "answers": [
+      "A"
+    ],
+    "type": "truefalse",
+    "domain": "Log Utilization",
+    "topic": "Monitors & Alerting",
+    "topicCode": "LU1",
+    "sourcePage": 42,
+    "flags": []
+  },
+  {
+    "id": 168,
+    "prompt": "The datadog.yaml file is used to configure log sources and agent settings.",
+    "options": [
+      {
+        "key": "A",
+        "text": "True"
+      },
+      {
+        "key": "B",
+        "text": "False"
+      }
+    ],
+    "answers": [
+      "A"
+    ],
+    "type": "truefalse",
+    "domain": "Log Collection",
+    "topic": "Enabling Log Collection",
+    "topicCode": "LC1",
+    "sourcePage": 42,
+    "flags": []
+  },
+  {
+    "id": 169,
+    "prompt": "Explain the concept of log anomaly detection in Datadog.",
+    "options": [
+      {
+        "key": "A",
+        "text": "Increasing network speed"
+      },
+      {
+        "key": "B",
+        "text": "Reducing system performance"
+      },
+      {
+        "key": "C",
+        "text": "Identifying unusual patterns or deviations in log data"
+      },
+      {
+        "key": "D",
+        "text": "A method to play multimedia files"
+      }
+    ],
+    "answers": [
+      "C"
+    ],
+    "type": "single",
+    "domain": "Log Utilization",
+    "topic": "Monitors & Alerting",
+    "topicCode": "LU1",
+    "sourcePage": 42,
+    "flags": []
+  },
+  {
+    "id": 170,
+    "prompt": "What are the benefits of using notebooks in Datadog ? (Choose 3 answers)",
+    "options": [
+      {
+        "key": "A",
+        "text": "Provides a platform for writing and executing Python code"
+      },
+      {
+        "key": "B",
+        "text": "Enhances log data encryption"
+      },
+      {
+        "key": "C",
+        "text": "Allows for interactive log analysis"
+      },
+      {
+        "key": "D",
+        "text": "Facilitates collaboration among team members"
+      },
+      {
+        "key": "E",
+        "text": "Enables the creation of custom log processing pipelines"
+      }
+    ],
+    "answers": [
+      "A",
+      "C",
+      "D"
+    ],
+    "type": "multi",
+    "domain": "Log Analysis",
+    "topic": "Visualizing",
+    "topicCode": "LA3",
+    "sourcePage": 42,
+    "flags": []
+  },
+  {
+    "id": 171,
+    "prompt": "How do you set up an integration with AWS CloudWatch Logs ?",
+    "options": [
+      {
+        "key": "A",
+        "text": "By changing the screen resolution"
+      },
+      {
+        "key": "B",
+        "text": "By using spreadsheet software"
+      },
+      {
+        "key": "C",
+        "text": "By configuring the integration in the Datadog UI and AWS console"
+      },
+      {
+        "key": "D",
+        "text": "By disabling log collection"
+      }
+    ],
+    "answers": [
+      "C"
+    ],
+    "type": "single",
+    "domain": "Log Collection",
+    "topic": "Enabling Log Collection",
+    "topicCode": "LC1",
+    "sourcePage": 43,
+    "flags": []
+  },
+  {
+    "id": 172,
+    "prompt": "Which tool in Datadog allows you to create custom log-based metrics ?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Trace Explorer"
+      },
+      {
+        "key": "B",
+        "text": "Log Explorer"
+      },
+      {
+        "key": "C",
+        "text": "Log Configuration Manager"
+      },
+      {
+        "key": "D",
+        "text": "Metric Generator"
+      }
+    ],
+    "answers": [
+      "B"
+    ],
+    "type": "single",
+    "domain": "Log Utilization",
+    "topic": "Metric Generation",
+    "topicCode": "LU2",
+    "sourcePage": 43,
+    "flags": []
+  },
+  {
+    "id": 173,
+    "prompt": "Describe the integration of Datadog with third-party log management tools.",
+    "options": [
+      {
+        "key": "A",
+        "text": "By changing desktop wallpaper"
+      },
+      {
+        "key": "B",
+        "text": "By using integrations and APIs provided by Datadog"
+      },
+      {
+        "key": "C",
+        "text": "By configuring hardware settings"
+      },
+      {
+        "key": "D",
+        "text": "By playing multimedia files"
+      }
+    ],
+    "answers": [
+      "B"
+    ],
+    "type": "single",
+    "domain": "Log Collection",
+    "topic": "Enabling Log Collection",
+    "topicCode": "LC1",
+    "sourcePage": 43,
+    "flags": []
+  },
+  {
+    "id": 174,
+    "prompt": "Log throttling controls the rate of log ingestion to prevent overloading the system.",
+    "options": [
+      {
+        "key": "A",
+        "text": "False"
+      },
+      {
+        "key": "B",
+        "text": "True"
+      }
+    ],
+    "answers": [
+      "B"
+    ],
+    "type": "truefalse",
+    "domain": "Log Collection",
+    "topic": "Log Filtering & Obfuscation",
+    "topicCode": "LC2",
+    "sourcePage": 43,
+    "flags": []
+  },
+  {
+    "id": 175,
+    "prompt": "How can you ensure compliance with log retention regulations using Datadog ?",
+    "options": [
+      {
+        "key": "A",
+        "text": "By changing the screen resolution"
+      },
+      {
+        "key": "B",
+        "text": "By disabling log collection"
+      },
+      {
+        "key": "C",
+        "text": "By ignoring regulations"
+      },
+      {
+        "key": "D",
+        "text": "By setting up proper retention policies and archives"
+      }
+    ],
+    "answers": [
+      "D"
+    ],
+    "type": "single",
+    "domain": "Additional Topics",
+    "topic": "Retention, Archives & Rehydration",
+    "topicCode": "X1",
+    "sourcePage": 44,
+    "flags": []
+  },
+  {
+    "id": 176,
+    "prompt": "Explain the process of integrating Datadog with Kubernetes for log management.",
+    "options": [
+      {
+        "key": "A",
+        "text": "By playing multimedia files"
+      },
+      {
+        "key": "B",
+        "text": "By deploying the Datadog Agent as a DaemonSet in Kubernetes"
+      },
+      {
+        "key": "C",
+        "text": "By changing desktop wallpaper"
+      },
+      {
+        "key": "D",
+        "text": "By configuring hardware settings"
+      }
+    ],
+    "answers": [
+      "B"
+    ],
+    "type": "single",
+    "domain": "Log Collection",
+    "topic": "Enabling Log Collection",
+    "topicCode": "LC1",
+    "sourcePage": 44,
+    "flags": []
+  },
+  {
+    "id": 177,
+    "prompt": "Explain the process of setting up role-based access control (RBAC) for log management in Datadog.",
+    "options": [
+      {
+        "key": "A",
+        "text": "By using spreadsheet software"
+      },
+      {
+        "key": "B",
+        "text": "By playing multimedia files"
+      },
+      {
+        "key": "C",
+        "text": "By changing the desktop wallpaper"
+      },
+      {
+        "key": "D",
+        "text": "By defining roles and permissions for users and teams in the Datadog UI"
+      }
+    ],
+    "answers": [
+      "D"
+    ],
+    "type": "single",
+    "domain": "Additional Topics",
+    "topic": "Security, RBAC & Audit Trail",
+    "topicCode": "X2",
+    "sourcePage": 44,
+    "flags": []
+  },
+  {
+    "id": 178,
+    "prompt": "Log management in Datadog primarily focuses on performance monitoring.",
+    "options": [
+      {
+        "key": "A",
+        "text": "True"
+      },
+      {
+        "key": "B",
+        "text": "False"
+      }
+    ],
+    "answers": [
+      "B"
+    ],
+    "type": "truefalse",
+    "domain": "Logging Fundamentals",
+    "topic": "Logging Systems – Rationale & Justification",
+    "topicCode": "LF1",
+    "sourcePage": 44,
+    "flags": []
+  },
+  {
+    "id": 179,
+    "prompt": "Which features are provided by the Datadog Audit Trail ? (Choose 2 answers)",
+    "options": [
+      {
+        "key": "A",
+        "text": "Monitors log ingestion rates"
+      },
+      {
+        "key": "B",
+        "text": "Records user activity within Datadog"
+      },
+      {
+        "key": "C",
+        "text": "Alerts on anomalies in log data"
+      },
+      {
+        "key": "D",
+        "text": "Encrypts log data"
+      },
+      {
+        "key": "E",
+        "text": "Tracks changes made to log pipelines"
+      }
+    ],
+    "answers": [
+      "B",
+      "E"
+    ],
+    "type": "multi",
+    "domain": "Additional Topics",
+    "topic": "Security, RBAC & Audit Trail",
+    "topicCode": "X2",
+    "sourcePage": 45,
+    "flags": []
+  },
+  {
+    "id": 180,
+    "prompt": "What is the role of the Datadog Agent Manager in log management ?",
+    "options": [
+      {
+        "key": "A",
+        "text": "To design user interfaces"
+      },
+      {
+        "key": "B",
+        "text": "To manage and monitor Datadog agents"
+      },
+      {
+        "key": "C",
+        "text": "To configure hardware settings"
+      },
+      {
+        "key": "D",
+        "text": "To play multimedia files"
+      }
+    ],
+    "answers": [
+      "B"
+    ],
+    "type": "single",
+    "domain": "Log Collection",
+    "topic": "Enabling Log Collection",
+    "topicCode": "LC1",
+    "sourcePage": 45,
+    "flags": []
+  },
+  {
+    "id": 181,
+    "prompt": "How do you share log analytics insights with your team in Datadog ?",
+    "options": [
+      {
+        "key": "A",
+        "text": "By sharing notebooks, dashboards, and alerts in the Datadog UI"
+      },
+      {
+        "key": "B",
+        "text": "By using spreadsheet software"
+      },
+      {
+        "key": "C",
+        "text": "By disabling log collection"
+      },
+      {
+        "key": "D",
+        "text": "By changing the screen resolution"
+      }
+    ],
+    "answers": [
+      "A"
+    ],
+    "type": "single",
+    "domain": "Log Analysis",
+    "topic": "Visualizing",
+    "topicCode": "LA3",
+    "sourcePage": 45,
+    "flags": []
+  },
+  {
+    "id": 182,
+    "prompt": "What type of log data does the Grok parser handle ?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Unstructured log data"
+      },
+      {
+        "key": "B",
+        "text": "Encrypted data"
+      },
+      {
+        "key": "C",
+        "text": "Binary data"
+      },
+      {
+        "key": "D",
+        "text": "Image files"
+      }
+    ],
+    "answers": [
+      "A"
+    ],
+    "type": "single",
+    "domain": "Log Collection",
+    "topic": "Processors & Pipelines",
+    "topicCode": "LC3",
+    "sourcePage": 45,
+    "flags": []
+  },
+  {
+    "id": 183,
+    "prompt": "What are the common issues faced during log collection, and how can they be resolved No network connection ?",
+    "options": [
+      {
+        "key": "A",
+        "text": "No network connection"
+      },
+      {
+        "key": "B",
+        "text": "Incorrect screen resolution"
+      },
+      {
+        "key": "C",
+        "text": "Misconfigured agents, network issues, insufficient permissions"
+      },
+      {
+        "key": "D",
+        "text": "Old hardware"
+      }
+    ],
+    "answers": [
+      "C"
+    ],
+    "type": "single",
+    "domain": "Log Troubleshooting",
+    "topic": "Ingestion Issues",
+    "topicCode": "LT1",
+    "sourcePage": 45,
+    "flags": []
+  },
+  {
+    "id": 184,
+    "prompt": "Log parsing in Datadog involves extracting structured data from unstructured log entries.",
+    "options": [
+      {
+        "key": "A",
+        "text": "True"
+      },
+      {
+        "key": "B",
+        "text": "False"
+      }
+    ],
+    "answers": [
+      "A"
+    ],
+    "type": "truefalse",
+    "domain": "Log Collection",
+    "topic": "Processors & Pipelines",
+    "topicCode": "LC3",
+    "sourcePage": 46,
+    "flags": []
+  },
+  {
+    "id": 185,
+    "prompt": "What are the benefits of using structured logging ? (Choose 4 answers)",
+    "options": [
+      {
+        "key": "A",
+        "text": "Enables better correlation of log events"
+      },
+      {
+        "key": "B",
+        "text": "Facilitates easier search and filtering"
+      },
+      {
+        "key": "C",
+        "text": "Allows for easier integration with third-party tools"
+      },
+      {
+        "key": "D",
+        "text": "Reduces log storage requirements"
+      },
+      {
+        "key": "E",
+        "text": "Enhances readability of log data"
+      }
+    ],
+    "answers": [
+      "A",
+      "B",
+      "C",
+      "E"
+    ],
+    "type": "multi",
+    "domain": "Logging Fundamentals",
+    "topic": "Logging Formats",
+    "topicCode": "LF2",
+    "sourcePage": 46,
+    "flags": []
+  },
+  {
+    "id": 186,
+    "prompt": "What are the benefits of using Datadog for container log management ?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Increased complexity"
+      },
+      {
+        "key": "B",
+        "text": "Comprehensive monitoring, centralized logging, and scalability"
+      },
+      {
+        "key": "C",
+        "text": "Reduced log visibility"
+      },
+      {
+        "key": "D",
+        "text": "Slower network speed"
+      }
+    ],
+    "answers": [
+      "B"
+    ],
+    "type": "single",
+    "domain": "Log Collection",
+    "topic": "Enabling Log Collection",
+    "topicCode": "LC1",
+    "sourcePage": 46,
+    "flags": []
+  },
+  {
+    "id": 187,
+    "prompt": "Describe how to configure Datadog to collect logs from Docker containers.",
+    "options": [
+      {
+        "key": "A",
+        "text": "By disabling log collection"
+      },
+      {
+        "key": "B",
+        "text": "By changing desktop wallpaper"
+      },
+      {
+        "key": "C",
+        "text": "By configuring the Datadog Agent to collect Docker logs"
+      },
+      {
+        "key": "D",
+        "text": "By using spreadsheet software"
+      }
+    ],
+    "answers": [
+      "C"
+    ],
+    "type": "single",
+    "domain": "Log Collection",
+    "topic": "Enabling Log Collection",
+    "topicCode": "LC1",
+    "sourcePage": 46,
+    "flags": []
+  },
+  {
+    "id": 188,
+    "prompt": "Describe the use of API keys in securing log data.",
+    "options": [
+      {
+        "key": "A",
+        "text": "To encrypt multimedia files"
+      },
+      {
+        "key": "B",
+        "text": "To change desktop wallpaper"
+      },
+      {
+        "key": "C",
+        "text": "To disable log collection"
+      },
+      {
+        "key": "D",
+        "text": "To authenticate and authorize API access to log data"
+      }
+    ],
+    "answers": [
+      "D"
+    ],
+    "type": "single",
+    "domain": "Additional Topics",
+    "topic": "Security, RBAC & Audit Trail",
+    "topicCode": "X2",
+    "sourcePage": 47,
+    "flags": []
+  },
+  {
+    "id": 189,
+    "prompt": "What is the purpose of log retention policies in Datadog ?",
+    "options": [
+      {
+        "key": "A",
+        "text": "To ensure compliance and long-term data analysis"
+      },
+      {
+        "key": "B",
+        "text": "To change desktop wallpaper"
+      },
+      {
+        "key": "C",
+        "text": "To manage user access"
+      },
+      {
+        "key": "D",
+        "text": "To disable log collection"
+      }
+    ],
+    "answers": [
+      "A"
+    ],
+    "type": "single",
+    "domain": "Additional Topics",
+    "topic": "Retention, Archives & Rehydration",
+    "topicCode": "X1",
+    "sourcePage": 47,
+    "flags": []
+  },
+  {
+    "id": 190,
+    "prompt": "Which Datadog feature helps you track changes and actions within the platform ?",
+    "options": [
+      {
+        "key": "A",
+        "text": "Network Monitor"
+      },
+      {
+        "key": "B",
+        "text": "Log Explorer"
+      },
+      {
+        "key": "C",
+        "text": "Audit Trail"
+      },
+      {
+        "key": "D",
+        "text": "Configuration Manager"
+      }
+    ],
+    "answers": [
+      "C"
+    ],
+    "type": "single",
+    "domain": "Additional Topics",
+    "topic": "Security, RBAC & Audit Trail",
+    "topicCode": "X2",
+    "sourcePage": 47,
+    "flags": []
+  },
+  {
+    "id": 191,
+    "prompt": "You can set up log retention policies and archives in Datadog to comply with regulations.",
+    "options": [
+      {
+        "key": "A",
+        "text": "False"
+      },
+      {
+        "key": "B",
+        "text": "True"
+      }
+    ],
+    "answers": [
+      "B"
+    ],
+    "type": "truefalse",
+    "domain": "Additional Topics",
+    "topic": "Retention, Archives & Rehydration",
+    "topicCode": "X1",
+    "sourcePage": 47,
+    "flags": []
+  },
+  {
+    "id": 192,
+    "prompt": "How do you troubleshoot missing logs in Datadog ?",
+    "options": [
+      {
+        "key": "A",
+        "text": "By changing desktop wallpaper"
+      },
+      {
+        "key": "B",
+        "text": "By checking agent status, configuration, and network connectivity"
+      },
+      {
+        "key": "C",
+        "text": "By ignoring the issue"
+      },
+      {
+        "key": "D",
+        "text": "By disabling log collection"
+      }
+    ],
+    "answers": [
+      "B"
+    ],
+    "type": "single",
+    "domain": "Log Troubleshooting",
+    "topic": "Ingestion Issues",
+    "topicCode": "LT1",
+    "sourcePage": 48,
+    "flags": []
+  },
+  {
+    "id": 193,
+    "prompt": "Describe the process of setting up log archives in Datadog.",
+    "options": [
+      {
+        "key": "A",
+        "text": "By configuring archive settings in the Datadog UI"
+      },
+      {
+        "key": "B",
+        "text": "By using a text editor"
+      },
+      {
+        "key": "C",
+        "text": "By changing desktop wallpaper"
+      },
+      {
+        "key": "D",
+        "text": "By disabling log collection"
+      }
+    ],
+    "answers": [
+      "A"
+    ],
+    "type": "single",
+    "domain": "Additional Topics",
+    "topic": "Retention, Archives & Rehydration",
+    "topicCode": "X1",
+    "sourcePage": 48,
+    "flags": []
+  },
+  {
+    "id": 194,
+    "prompt": "Explain the concept of log rehydration in Datadog.",
+    "options": [
+      {
+        "key": "A",
+        "text": "A method to cool down servers"
+      },
+      {
+        "key": "B",
+        "text": "A method to encrypt log data"
+      },
+      {
+        "key": "C",
+        "text": "A technique to improve network speed"
+      },
+      {
+        "key": "D",
+        "text": "A process to restore archived logs for analysis"
+      }
+    ],
+    "answers": [
+      "D"
+    ],
+    "type": "single",
+    "domain": "Additional Topics",
+    "topic": "Retention, Archives & Rehydration",
+    "topicCode": "X1",
+    "sourcePage": 48,
+    "flags": []
+  },
+  {
+    "id": 195,
+    "prompt": "How can you automate log management tasks using Datadog APIs ?",
+    "options": [
+      {
+        "key": "A",
+        "text": "By changing network settings"
+      },
+      {
+        "key": "B",
+        "text": "By writing scripts that interact with Datadog APIs"
+      },
+      {
+        "key": "C",
+        "text": "By using desktop applications"
+      },
+      {
+        "key": "D",
+        "text": "By disabling log collection"
+      }
+    ],
+    "answers": [
+      "B"
+    ],
+    "type": "single",
+    "domain": "Additional Topics",
+    "topic": "Cross-product, architecture & APIs",
+    "topicCode": "X3",
+    "sourcePage": 48,
+    "flags": []
+  },
+  {
+    "id": 196,
+    "prompt": "What are the benefits of using notebooks for log analysis in Datadog ?",
+    "options": [
+      {
+        "key": "A",
+        "text": "To change desktop wallpaper"
+      },
+      {
+        "key": "B",
+        "text": "To play multimedia files"
+      },
+      {
+        "key": "C",
+        "text": "To configure hardware settings"
+      },
+      {
+        "key": "D",
+        "text": "To create interactive, customizable, and shareable log analysis workflows"
+      }
+    ],
+    "answers": [
+      "D"
+    ],
+    "type": "single",
+    "domain": "Log Analysis",
+    "topic": "Visualizing",
+    "topicCode": "LA3",
+    "sourcePage": 49,
+    "flags": []
+  },
+  {
+    "id": 197,
+    "prompt": "How can log collection be optimized for Kubernetes environments in Datadog ? (Choose 2 answers)",
+    "options": [
+      {
+        "key": "A",
+        "text": "Using Kubernetes labels for log enrichment"
+      },
+      {
+        "key": "B",
+        "text": "Configuring node-specific log processors"
+      },
+      {
+        "key": "C",
+        "text": "By deploying a dedicated logging pod in each namespace"
+      },
+      {
+        "key": "D",
+        "text": "Increasing log retention duration for Kubernetes logs"
+      },
+      {
+        "key": "E",
+        "text": "Utilizing fluentd as a log collector"
+      }
+    ],
+    "answers": [
+      "A",
+      "E"
+    ],
+    "type": "multi",
+    "domain": "Log Collection",
+    "topic": "Enabling Log Collection",
+    "topicCode": "LC1",
+    "sourcePage": 49,
+    "flags": []
+  },
+  {
+    "id": 198,
+    "prompt": "What are the key security features available for log management in Datadog ?",
+    "options": [
+      {
+        "key": "A",
+        "text": "To change desktop wallpaper"
+      },
+      {
+        "key": "B",
+        "text": "Encryption, access controls, and audit trails"
+      },
+      {
+        "key": "C",
+        "text": "To play multimedia files"
+      },
+      {
+        "key": "D",
+        "text": "To configure hardware settings"
+      }
+    ],
+    "answers": [
+      "B"
+    ],
+    "type": "single",
+    "domain": "Additional Topics",
+    "topic": "Security, RBAC & Audit Trail",
+    "topicCode": "X2",
+    "sourcePage": 49,
+    "flags": []
+  },
+  {
+    "id": 199,
+    "prompt": "What is the role of the Datadog Agent in Kubernetes environments ?",
+    "options": [
+      {
+        "key": "A",
+        "text": "To configure hardware settings"
+      },
+      {
+        "key": "B",
+        "text": "To change desktop wallpaper"
+      },
+      {
+        "key": "C",
+        "text": "To play multimedia files"
+      },
+      {
+        "key": "D",
+        "text": "To collect and forward metrics and logs to Datadog"
+      }
+    ],
+    "answers": [
+      "D"
+    ],
+    "type": "single",
+    "domain": "Log Collection",
+    "topic": "Enabling Log Collection",
+    "topicCode": "LC1",
+    "sourcePage": 49,
+    "flags": []
+  },
+  {
+    "id": 200,
+    "prompt": "How do you ensure data privacy and security in Datadog log management ?",
+    "options": [
+      {
+        "key": "A",
+        "text": "By changing the screen resolution"
+      },
+      {
+        "key": "B",
+        "text": "By using spreadsheet software"
+      },
+      {
+        "key": "C",
+        "text": "By implementing encryption, access controls, and monitoring user activities"
+      },
+      {
+        "key": "D",
+        "text": "By disabling log collection"
+      }
+    ],
+    "answers": [
+      "C"
+    ],
+    "type": "single",
+    "domain": "Additional Topics",
+    "topic": "Security, RBAC & Audit Trail",
+    "topicCode": "X2",
+    "sourcePage": 49,
+    "flags": []
+  },
+  {
+    "id": 201,
+    "prompt": "How can you use the Audit Trail to track changes in log configurations ?",
+    "options": [
+      {
+        "key": "A",
+        "text": "By using spreadsheet software"
+      },
+      {
+        "key": "B",
+        "text": "By disabling log collection"
+      },
+      {
+        "key": "C",
+        "text": "By reviewing logs in the Audit Trail section of Datadog"
+      },
+      {
+        "key": "D",
+        "text": "By changing the screen resolution"
+      }
+    ],
+    "answers": [
+      "C"
+    ],
+    "type": "single",
+    "domain": "Additional Topics",
+    "topic": "Security, RBAC & Audit Trail",
+    "topicCode": "X2",
+    "sourcePage": 50,
+    "flags": []
+  },
+  {
+    "id": 202,
+    "prompt": "Which are common processors used in Datadog's log processing pipeline ? (Choose 3 answers)",
+    "options": [
+      {
+        "key": "A",
+        "text": "JSON Parser"
+      },
+      {
+        "key": "B",
+        "text": "XML Parser"
+      },
+      {
+        "key": "C",
+        "text": "Tag"
+      },
+      {
+        "key": "D",
+        "text": "Grok"
+      },
+      {
+        "key": "E",
+        "text": "Rename"
+      }
+    ],
+    "answers": [
+      "A",
+      "D",
+      "E"
+    ],
+    "type": "multi",
+    "domain": "Log Collection",
+    "topic": "Processors & Pipelines",
+    "topicCode": "LC3",
+    "sourcePage": 50,
+    "flags": []
+  },
+  {
+    "id": 203,
+    "prompt": "What is a primary benefit of using log facets in Datadog ?",
+    "options": [
+      {
+        "key": "A",
+        "text": "To categorize and filter log data"
+      },
+      {
+        "key": "B",
+        "text": "To encrypt data"
+      },
+      {
+        "key": "C",
+        "text": "To play multimedia files"
+      },
+      {
+        "key": "D",
+        "text": "To manage hardware settings"
+      }
+    ],
+    "answers": [
+      "A"
+    ],
+    "type": "single",
+    "domain": "Log Searching & Filtering",
+    "topic": "Explorer Functionality",
+    "topicCode": "SF3",
+    "sourcePage": 50,
+    "flags": []
+  },
+  {
+    "id": 204,
+    "prompt": "Log rehydration in Datadog refers to the process of restoring archived logs for analysis.",
+    "options": [
+      {
+        "key": "A",
+        "text": "True"
+      },
+      {
+        "key": "B",
+        "text": "False"
+      }
+    ],
+    "answers": [
+      "A"
+    ],
+    "type": "truefalse",
+    "domain": "Additional Topics",
+    "topic": "Retention, Archives & Rehydration",
+    "topicCode": "X1",
+    "sourcePage": 50,
+    "flags": []
+  },
+  {
+    "id": 205,
+    "prompt": "How can you configure Datadog to detect anomalies in log data ?",
+    "options": [
+      {
+        "key": "A",
+        "text": "By using a text editor"
+      },
+      {
+        "key": "B",
+        "text": "By disabling log collection"
+      },
+      {
+        "key": "C",
+        "text": "By changing the desktop wallpaper"
+      },
+      {
+        "key": "D",
+        "text": "By setting up anomaly detection rules in the Datadog UI"
+      }
+    ],
+    "answers": [
+      "D"
+    ],
+    "type": "single",
+    "domain": "Log Utilization",
+    "topic": "Monitors & Alerting",
+    "topicCode": "LU1",
+    "sourcePage": 51,
+    "flags": []
+  },
+  {
+    "id": 206,
+    "prompt": "Role-Based Access Control (RBAC) in Datadog allows you to define roles and permissions for users and teams.",
+    "options": [
+      {
+        "key": "A",
+        "text": "True"
+      },
+      {
+        "key": "B",
+        "text": "False"
+      }
+    ],
+    "answers": [
+      "A"
+    ],
+    "type": "truefalse",
+    "domain": "Additional Topics",
+    "topic": "Security, RBAC & Audit Trail",
+    "topicCode": "X2",
+    "sourcePage": 51,
+    "flags": []
+  },
+  {
+    "id": 207,
+    "prompt": "Which methods can be used to export logs from Datadog ? (Choose 3 answers)",
+    "options": [
+      {
+        "key": "A",
+        "text": "Export to Google Cloud Storage"
+      },
+      {
+        "key": "B",
+        "text": "Send logs to an external syslog server"
+      },
+      {
+        "key": "C",
+        "text": "Export to S3 bucket"
+      },
+      {
+        "key": "D",
+        "text": "Share logs via email"
+      },
+      {
+        "key": "E",
+        "text": "Download logs as CSV files"
+      }
+    ],
+    "answers": [
+      "B",
+      "C",
+      "E"
+    ],
+    "type": "multi",
+    "domain": "Log Utilization",
+    "topic": "Exporting",
+    "topicCode": "LU3",
+    "sourcePage": 51,
+    "flags": []
+  },
+  {
+    "id": 208,
+    "prompt": "Explain the concept of log throttling and how it is managed in Datadog.",
+    "options": [
+      {
+        "key": "A",
+        "text": "Increasing network speed"
+      },
+      {
+        "key": "B",
+        "text": "A method to encrypt data"
+      },
+      {
+        "key": "C",
+        "text": "Reducing system performance"
+      },
+      {
+        "key": "D",
+        "text": "Controlling the rate of log ingestion to avoid overloading the system"
+      }
+    ],
+    "answers": [
+      "D"
+    ],
+    "type": "single",
+    "domain": "Log Collection",
+    "topic": "Log Filtering & Obfuscation",
+    "topicCode": "LC2",
+    "sourcePage": 51,
+    "flags": []
+  },
+  {
+    "id": 209,
+    "prompt": "Which are primary security features available in Datadog log management ? (Choose 3 answers)",
+    "options": [
+      {
+        "key": "A",
+        "text": "Data encryption"
+      },
+      {
+        "key": "B",
+        "text": "Role-based access control (RBAC)"
+      },
+      {
+        "key": "C",
+        "text": "Log throttling"
+      },
+      {
+        "key": "D",
+        "text": "Two-factor authentication (2FA)"
+      },
+      {
+        "key": "E",
+        "text": "Audit trails"
+      }
+    ],
+    "answers": [
+      "A",
+      "B",
+      "E"
+    ],
+    "type": "multi",
+    "domain": "Additional Topics",
+    "topic": "Security, RBAC & Audit Trail",
+    "topicCode": "X2",
+    "sourcePage": 52,
+    "flags": []
+  },
+  {
+    "id": 210,
+    "prompt": "How do you rehydrate archived logs for analysis ?",
+    "options": [
+      {
+        "key": "A",
+        "text": "By disabling log collection"
+      },
+      {
+        "key": "B",
+        "text": "By using the log rehydration feature in the Datadog UI"
+      },
+      {
+        "key": "C",
+        "text": "By using spreadsheet software"
+      },
+      {
+        "key": "D",
+        "text": "By changing the screen resolution"
+      }
+    ],
+    "answers": [
+      "B"
+    ],
+    "type": "single",
+    "domain": "Additional Topics",
+    "topic": "Retention, Archives & Rehydration",
+    "topicCode": "X1",
+    "sourcePage": 52,
+    "flags": []
+  }
+]

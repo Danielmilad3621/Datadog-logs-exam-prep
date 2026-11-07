@@ -1,0 +1,26 @@
+{
+  "total": 210,
+  "typeCounts": {
+    "multi": 51,
+    "single": 118,
+    "truefalse": 41
+  },
+  "issues": [
+    {
+      "id": 149,
+      "flags": [
+        "Says choose 2; key has 3"
+      ],
+      "text": "What are common processors used in log processing pipelines ? (Choose 2 answers)"
+    }
+  ],
+  "domainCounts": {
+    "Log Utilization": 33,
+    "Additional Topics": 45,
+    "Log Collection": 68,
+    "Logging Fundamentals": 23,
+    "Log Analysis": 23,
+    "Log Troubleshooting": 7,
+    "Log Searching & Filtering": 11
+  }
+}
