@@ -33,3 +33,28 @@ it('upgrades a legacy active quiz to a snapshot and keeps scoring stable after b
   fireEvent.click(screen.getByRole('button', { name: 'Finish & score' }));
   await waitFor(() => expect(JSON.parse(screen.getByTestId('history').textContent || '[]')[0]).toMatchObject({ correct: 1, scored: 1 }));
 });
+
+it('collapses and restores the workspace without losing the current question or answer', async () => {
+  render(<Harness questions={[original]} />);
+  fireEvent.click(screen.getAllByRole('button', { name: /Practice$/ })[0]!);
+  fireEvent.click(screen.getByRole('button', { name: 'Start practice →' }));
+  expect(await screen.findByRole('heading', { name: 'Original question' })).toBeInTheDocument();
+  const answer = screen.getByRole('button', { name: 'A First' });
+  fireEvent.click(answer);
+  const hide = screen.getByRole('button', { name: 'Hide sidebar' });
+  expect(hide).toHaveAttribute('aria-expanded', 'true');
+  expect(hide).toHaveAttribute('aria-controls', 'workspace-sidebar');
+  fireEvent.click(hide);
+  const show = screen.getByRole('button', { name: 'Show sidebar' });
+  expect(show).toHaveAttribute('aria-expanded', 'false');
+  expect(document.getElementById('workspace-sidebar')).not.toBeVisible();
+  expect(document.querySelector('.shell')).toHaveClass('sidebar-collapsed');
+  expect(screen.getByRole('heading', { name: 'Original question' })).toBeInTheDocument();
+  expect(answer).toHaveClass('selected');
+  fireEvent.click(show);
+  expect(screen.getByRole('complementary', { name: 'Workspace' })).toBeVisible();
+  expect(document.querySelector('.shell')).not.toHaveClass('sidebar-collapsed');
+  expect(answer).toHaveClass('selected');
+  fireEvent.click(screen.getByRole('button', { name: 'Check answer' }));
+  expect(screen.getByText('✓ Correct answer')).toBeInTheDocument();
+});
