@@ -1,5 +1,6 @@
 
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { PanelLeftClose, PanelLeftOpen } from 'lucide-react';
 import type { ChangeEvent, Dispatch, SetStateAction, ReactNode } from 'react';
 import type { StudyProgress } from '@/hooks/use-cloud-progress';
 import type { Question } from '@/lib/question-types';
@@ -62,6 +63,7 @@ export default function StudyApp({ questions: bankQuestions, progress, setProgre
   const [now, setNow] = useState(() => Date.now());
   const [showReview, setShowReview] = useState(false);
   const [navOpen, setNavOpen] = useState(false);
+  const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
   const importRef = useRef<HTMLInputElement>(null);
   const bankById = useMemo(() => new Map(bankQuestions.map(q => [q.id, q])), [bankQuestions]);
   const qById = useMemo(() => new Map([...bankQuestions, ...(quiz?.questionSnapshot ?? [])].map(q => [q.id, q])), [bankQuestions, quiz?.questionSnapshot]);
@@ -221,8 +223,8 @@ export default function StudyApp({ questions: bankQuestions, progress, setProgre
   const allCorrect = quiz?.ids.filter(id => matches(quiz.selections[id] || [], qById.get(id)?.answers || [])).length || 0;
 
   return (
-    <div className="shell">
-      <aside className="sidebar">
+    <div className={`shell ${sidebarCollapsed ? 'sidebar-collapsed' : ''}`}>
+      <aside id="workspace-sidebar" className="sidebar" aria-label="Workspace" hidden={sidebarCollapsed}>
         <div className="logo"><span className="logo-mark">◈</span><div><b>LOG LAB</b><small>Fundamentals prep</small></div></div>
         <div className="nav-caption">WORKSPACE</div>
         <nav>{nav.map(n => <button key={n.id} className={`nav-item ${tab === n.id ? 'nav-active' : ''}`} onClick={() => setTab(n.id)}><span className="nav-symbol">{n.mark}</span>{n.name}{n.id === 'exam' && quiz?.mode === 'exam' && !quiz.finished && <i className="live-dot" />}</button>)}</nav>
@@ -235,7 +237,7 @@ export default function StudyApp({ questions: bankQuestions, progress, setProgre
         </div>
       </aside>
       <main className="main">
-        <div className="topbar"><span className="breadcrumb">STUDY SPACE <span>/</span> {nav.find(n => n.id === tab)?.name.toUpperCase()}</span>{accountControls}</div>
+        <div className="topbar"><div className="topbar-start"><button type="button" className="btn btn-outline sidebar-toggle" aria-controls="workspace-sidebar" aria-expanded={!sidebarCollapsed} onClick={() => setSidebarCollapsed(collapsed => !collapsed)}>{sidebarCollapsed ? <PanelLeftOpen size={18} aria-hidden="true" /> : <PanelLeftClose size={18} aria-hidden="true" />}{sidebarCollapsed ? 'Show sidebar' : 'Hide sidebar'}</button><span className="breadcrumb">STUDY SPACE <span>/</span> {nav.find(n => n.id === tab)?.name.toUpperCase()}</span></div>{accountControls}</div>
         {tab === 'home' && <div className="content">
           <div className="hero"><div className="eyebrow">YOUR CERTIFICATION STUDY COMPANION</div><h1>Master Datadog logs.<br/><span>One question at a time.</span></h1><p>Review the imported practice bank, build confidence by domain, and sit a timed exam simulation when you&apos;re ready.</p><div className="hero-actions"><button className="btn btn-primary" onClick={() => setTab('cards')}>Study flashcards <span>↗</span></button><button className="btn btn-light" onClick={() => setTab('exam')}>Mock exam</button></div></div>
           <div className="metric-grid">
