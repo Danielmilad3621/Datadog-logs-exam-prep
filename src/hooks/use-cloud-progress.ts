@@ -2,7 +2,7 @@ import { useCallback, useEffect, useRef, useState } from 'react';
 import { supabase } from '@/integrations/supabase/client';
 import type { Json } from '@/integrations/supabase/types';
 
-export type StudyProgress = { cards: Record<string, { known: number; again: number; updated: string }>; answers: Record<string, { correct: number; incorrect: number }>; history: { id: string; mode: 'practice' | 'exam'; date: string; correct: number; total: number; scored: number; scoredTotal: number }[]; mistakes?: import('@/lib/mistakes').MistakeDeck; cleared?: { id: number; date: string }[] };
+export type StudyProgress = { hardQuestions?: number[]; cards: Record<string, { known: number; again: number; updated: string }>; answers: Record<string, { correct: number; incorrect: number }>; history: { id: string; mode: 'practice' | 'exam'; date: string; correct: number; total: number; scored: number; scoredTotal: number }[]; mistakes?: import('@/lib/mistakes').MistakeDeck; cleared?: { id: number; date: string }[] };
 const empty = (): StudyProgress => ({ cards: {}, answers: {}, history: [] });
 function valid(value: unknown): value is StudyProgress {
   if (!value || typeof value !== 'object') return false;

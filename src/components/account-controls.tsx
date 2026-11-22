@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useNavigate, useRouter } from '@tanstack/react-router';
+import { Link, useNavigate, useRouter } from '@tanstack/react-router';
 import { useQueryClient } from '@tanstack/react-query';
 import { LogOut, UserRound, Save } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -25,5 +25,5 @@ export function AccountControls({ account, status }: { account: { userId: string
     setMessage(error ? 'Could not save your profile.' : 'Profile saved');
     if (!error) await router.invalidate();
   }
-  return <div className="account-toolbar"><span className="sync-status" role="status">{status}</span><Button variant="ghost" size="icon" aria-label="Your profile" title="Your profile" onClick={() => setOpen(!open)}><UserRound /></Button><Button variant="ghost" size="icon" aria-label="Sign out" title="Sign out" onClick={signOut}><LogOut /></Button>{open && <div className="account-menu"><h3>Your profile</h3>{account.profile.avatar_url && <img className="account-avatar" src={account.profile.avatar_url} alt="" referrerPolicy="no-referrer" />}<label>Display name<input value={name} maxLength={100} onChange={e => setName(e.target.value)} /></label><Button onClick={save}><Save />Save profile</Button><p role="status">{message}</p></div>}</div>;
+  return <div className="account-toolbar"><Link to="/questions" className="btn btn-outline manage-link">Manage questions</Link><span className="sync-status" role="status">{status}</span><Button variant="ghost" size="icon" aria-label="Your profile" title="Your profile" onClick={() => setOpen(!open)}><UserRound /></Button><Button variant="ghost" size="icon" aria-label="Sign out" title="Sign out" onClick={signOut}><LogOut /></Button>{open && <div className="account-menu"><h3>Your profile</h3>{account.profile.avatar_url && <img className="account-avatar" src={account.profile.avatar_url} alt="" referrerPolicy="no-referrer" />}<label>Display name<input value={name} maxLength={100} onChange={e => setName(e.target.value)} /></label><Button onClick={save}><Save />Save profile</Button><p role="status">{message}</p></div>}</div>;
 }

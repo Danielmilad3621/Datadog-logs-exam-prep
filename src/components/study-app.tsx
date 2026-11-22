@@ -25,7 +25,7 @@ const applyAnswers = (p: Progress, results: { id: number; correct: boolean }[]):
 type Quiz = {
   mode: 'practice' | 'exam'; ids: number[]; index: number; selections: Record<string, string[]>;
   checked: number[]; flagged: number[]; startedAt: number; endsAt: number | null;
-  scoredIds: number[]; finished: boolean;
+  scoredIds: number[]; finished: boolean; questionSnapshot?: Question[];
 };
 const SESSION = 'datadog-log-lab-current-quiz-v1';
 const shuffle = <T,>(array: T[]): T[] => {
@@ -44,7 +44,11 @@ const formatTime = (seconds: number) => {
   return `${String(Math.floor(s / 3600)).padStart(2, '0')}:${String(Math.floor((s % 3600) / 60)).padStart(2, '0')}:${String(s % 60).padStart(2, '0')}`;
 };
 
-export default function StudyApp({ questions, progress, setProgress, accountControls }: { questions: Question[]; progress: StudyProgress; setProgress: Dispatch<SetStateAction<StudyProgress>>; accountControls: ReactNode }) {
+export default function StudyApp({ questions: bankQuestions, progress, setProgress, accountControls }: { questions: Question[]; progress: StudyProgress; setProgress: Dispatch<SetStateAction<StudyProgress>>; accountControls: ReactNode }) {
+  const questions = useMemo(() => bankQuestions.filter(q => !q.status || q.status === 'published'), [bankQuestions]);
+  const [difficulty, setDifficulty] = useState('all');
+  const [questionSet, setQuestionSet] = useState('all');
+  const [personalHard, setPersonalHard] = useState(false);
   const [tab, setTab] = useState<Tab>('home');
   const [domain, setDomain] = useState('All domains');
   const [topic, setTopic] = useState('All topics');
@@ -59,11 +63,16 @@ export default function StudyApp({ questions, progress, setProgress, accountCont
   const [showReview, setShowReview] = useState(false);
   const [navOpen, setNavOpen] = useState(false);
   const importRef = useRef<HTMLInputElement>(null);
-  const qById = useMemo(() => new Map(questions.map(q => [q.id, q])), [questions]);
+  const bankById = useMemo(() => new Map(bankQuestions.map(q => [q.id, q])), [bankQuestions]);
+  const qById = useMemo(() => new Map([...bankQuestions, ...(quiz?.questionSnapshot ?? [])].map(q => [q.id, q])), [bankQuestions, quiz?.questionSnapshot]);
+  const questionSets = useMemo(() => [...new Map(questions.filter(q => q.setId).map(q => [q.setId!, q.setName ?? 'Question set'])).entries()], [questions]);
   const domains = useMemo(() => [...new Set(questions.map(q => q.domain))], [questions]);
   const topics = useMemo(() => [...new Set(questions.filter(q => domain === 'All domains' || q.domain === domain).map(q => q.topic))], [questions, domain]);
   const filtered = useMemo(() => questions.filter(q =>
-    (domain === 'All domains' || q.domain === domain) && (topic === 'All topics' || q.topic === topic)), [questions, domain, topic]);
+    (domain === 'All domains' || q.domain === domain) && (topic === 'All topics' || q.topic === topic)
+    && (difficulty === 'all' || (q.difficulty ?? 'unrated') === difficulty)
+    && (questionSet === 'all' || q.setId === Number(questionSet))
+    && (!personalHard || progress.hardQuestions?.includes(q.id))), [questions, domain, topic, difficulty, questionSet, personalHard, progress.hardQuestions]);
   const cards = useMemo(() => {
     const eligible = filtered.filter(q => !onlyMissed || (progress.cards[q.id]?.again ?? 0) > (progress.cards[q.id]?.known ?? 0));
     if (!cardOrder) return eligible;
@@ -85,11 +94,11 @@ export default function StudyApp({ questions, progress, setProgress, accountCont
       const session = window.localStorage.getItem(SESSION);
       if (session) {
         const parsed = JSON.parse(session) as Quiz;
-        if (Array.isArray(parsed.ids) && parsed.ids.every(id => qById.has(id))) setQuiz(parsed);
+        if (Array.isArray(parsed.ids) && parsed.ids.every(id => bankById.has(id))) setQuiz({ ...parsed, questionSnapshot: parsed.questionSnapshot ?? parsed.ids.map(id => bankById.get(id)!).filter(Boolean) });
       }
     } catch (e) { console.warn('Could not restore saved study data:', e); }
     setLoaded(true);
-  }, [qById]);
+  }, [bankById]);
   useEffect(() => { if (loaded) {
     if (quiz && !quiz.finished) window.localStorage.setItem(SESSION, JSON.stringify(quiz));
     else window.localStorage.removeItem(SESSION);
@@ -130,7 +139,7 @@ export default function StudyApp({ questions, progress, setProgress, accountCont
     if (!ids.length) return;
     const nowTime = Date.now();
     setQuiz({ mode, ids, index: 0, selections: {}, checked: [], flagged: [],
-      startedAt: nowTime, endsAt: mode === 'exam' ? nowTime + 120 * 60 * 1000 : null,
+      questionSnapshot: pool.filter(q => ids.includes(q.id)), startedAt: nowTime, endsAt: mode === 'exam' ? nowTime + 120 * 60 * 1000 : null,
       scoredIds: mode === 'exam' ? shuffle(ids).slice(0, 75) : ids, finished: false });
     setNow(nowTime); setShowReview(false); setTab(mode === 'exam' ? 'exam' : 'practice');
   }
@@ -182,12 +191,22 @@ export default function StudyApp({ questions, progress, setProgress, accountCont
     { id: 'progress', name: 'Progress', mark: '↗' },
   ] as const;
   const domainIndex = new Map(domains.map((d, i) => [d, i]));
-  const mistakeQs = Object.keys(progress.mistakes ?? {}).map(id => qById.get(Number(id))).filter((q): q is Question => !!q);
+  const mistakeQs = Object.keys(progress.mistakes ?? {}).map(id => bankById.get(Number(id))).filter((q): q is Question => !!q && (!q.status || q.status === 'published'));
   const mistakeTopics = [...new Set(mistakeQs.map(q => q.topic))].map(t => ({ topic: t, qs: mistakeQs.filter(q => q.topic === t) }));
+  function toggleHard(id: number) {
+    setProgress(p => ({ ...p, hardQuestions: p.hardQuestions?.includes(id) ? p.hardQuestions.filter(x => x !== id) : [...(p.hardQuestions ?? []), id] }));
+  }
+  const extraFilters = <div className="filters extra-filters">
+    <label>Difficulty<select value={difficulty} onChange={e => { setDifficulty(e.target.value); setCardIndex(0); setFlipped(false); }}><option value="all">All difficulties</option>{['unrated','easy','medium','hard'].map(d => <option value={d} key={d}>{d}</option>)}</select></label>
+    <label>Question set<select value={questionSet} onChange={e => { setQuestionSet(e.target.value); setCardIndex(0); setFlipped(false); }}><option value="all">All question sets</option>{questionSets.map(([id, name]) => <option value={id} key={id}>{name}</option>)}</select></label>
+    <label className="check-filter"><input type="checkbox" checked={personalHard} onChange={e => { setPersonalHard(e.target.checked); setCardIndex(0); setFlipped(false); }} />Hard for me only</label>
+  </div>;
   const TopicTags = ({ q }: { q: Question }) => (
     <div className="tag-row">
       <button className={`tag tag-d${domainIndex.get(q.domain) ?? 0}`} onClick={() => { setFilters(q.domain); setTab('cards'); }} title="Show flashcards for this domain">{q.domain}</button>
       <button className="tag muted" onClick={() => { setFilters(q.domain, q.topic); setTab('cards'); }} title="Show flashcards for this topic">#{q.topic}</button>
+      {q.difficulty && q.difficulty !== 'unrated' && <span className="tag muted">{q.difficulty}</span>}
+      <button className="tag muted" aria-pressed={progress.hardQuestions?.includes(q.id) ?? false} onClick={() => toggleHard(q.id)}>{progress.hardQuestions?.includes(q.id) ? '★ Hard for me' : '☆ Mark hard for me'}</button>
       {progress.mistakes?.[q.id] && <span className="tag tag-mistake">In mistakes</span>}
     </div>
   );
@@ -236,18 +255,18 @@ export default function StudyApp({ questions, progress, setProgress, accountCont
         </div>}
 
         {tab === 'cards' && <div className="content"><div className="page-head"><div className="eyebrow">ACTIVE RECALL</div><h1>Flashcards</h1><p>Flip to reveal the source answer, then mark whether you knew it.</p></div>
-          <div className="filters"><label>Exam domain<select value={domain} onChange={e => setFilters(e.target.value)}><option>All domains</option>{domains.map(x => <option key={x}>{x}</option>)}</select></label><label>Subtopic<select value={topic} onChange={e => setFilters(domain,e.target.value)}><option>All topics</option>{topics.map(x => <option key={x}>{x}</option>)}</select></label><label className="check-filter"><input type="checkbox" checked={onlyMissed} onChange={e => { setOnlyMissed(e.target.checked); setCardIndex(0); setFlipped(false); }}/> Review difficult cards</label><button className="btn btn-outline" onClick={() => {setCardOrder(shuffle(filtered.map(q => q.id)));setCardIndex(0);setFlipped(false);}}>Shuffle ↝</button></div>
-          {currentCard ? <div className="card-area"><div className="card-meta"><span>FLASHCARD {safeIndex+1} OF {cards.length}</span><span>PDF Q{currentCard.id} · Page {currentCard.sourcePage}</span></div><div className={`flashcard ${flipped ? 'is-flipped' : ''}`} key={`${currentCard.id}-${flipped}`}><TopicTags q={currentCard} /><p className="mini">{flipped ? 'ANSWER' : 'QUESTION'}</p><h2>{flipped ? answerDisplay(currentCard) : currentCard.prompt}</h2>{!flipped && <div className="option-mini">{currentCard.options.map(o => <div key={o.key}><span>{o.key}</span>{o.text}</div>)}</div>}{flipped && <div className="answer-box"><span>From your uploaded PDF</span><p>{currentCard.flags.length ? `⚠ ${currentCard.flags.join('; ')}. Please verify this answer.` : 'Check the official Datadog documentation if an answer looks questionable.'}</p></div>}</div><div className="card-actions">{!flipped ? <button className="btn btn-primary large" onClick={() => setFlipped(true)}>Reveal answer <span>↗</span></button> : <><button className="btn btn-warn" onClick={() => markCard(false)}>↺ Review again</button><button className="btn btn-success" onClick={() => markCard(true)}>✓ I knew this</button></>}<button className="btn btn-outline" onClick={() => {setFlipped(false);setCardIndex(i => (i+1)%cards.length);}}>Skip →</button></div></div> : <div className="empty">No cards match this filter. Turn off “Review difficult cards” or choose another topic.</div>}
+          <div className="filters"><label>Exam domain<select value={domain} onChange={e => setFilters(e.target.value)}><option>All domains</option>{domains.map(x => <option key={x}>{x}</option>)}</select></label><label>Subtopic<select value={topic} onChange={e => setFilters(domain,e.target.value)}><option>All topics</option>{topics.map(x => <option key={x}>{x}</option>)}</select></label><label className="check-filter"><input type="checkbox" checked={onlyMissed} onChange={e => { setOnlyMissed(e.target.checked); setCardIndex(0); setFlipped(false); }}/> Needs more review</label><button className="btn btn-outline" onClick={() => {setCardOrder(shuffle(filtered.map(q => q.id)));setCardIndex(0);setFlipped(false);}}>Shuffle ↝</button></div>
+          {extraFilters}{currentCard ? <div className="card-area"><div className="card-meta"><span>FLASHCARD {safeIndex+1} OF {cards.length}</span><span>Q{currentCard.id}{currentCard.sourcePage > 0 ? ' · Page ' + currentCard.sourcePage : ''}</span></div><div className={`flashcard ${flipped ? 'is-flipped' : ''}`} key={`${currentCard.id}-${flipped}`}><TopicTags q={currentCard} /><p className="mini">{flipped ? 'ANSWER' : 'QUESTION'}</p><h2>{flipped ? answerDisplay(currentCard) : currentCard.prompt}</h2>{!flipped && <div className="option-mini">{currentCard.options.map(o => <div key={o.key}><span>{o.key}</span>{o.text}</div>)}</div>}{flipped && <div className="answer-box"><span>{currentCard.source || "Question source"}</span>{currentCard.explanation && <p>{currentCard.explanation}</p>}<p>{currentCard.flags.length ? `⚠ ${currentCard.flags.join('; ')}. Please verify this answer.` : 'Check the official Datadog documentation if an answer looks questionable.'}</p></div>}</div><div className="card-actions">{!flipped ? <button className="btn btn-primary large" onClick={() => setFlipped(true)}>Reveal answer <span>↗</span></button> : <><button className="btn btn-warn" onClick={() => markCard(false)}>↺ Review again</button><button className="btn btn-success" onClick={() => markCard(true)}>✓ I knew this</button></>}<button className="btn btn-outline" onClick={() => {setFlipped(false);setCardIndex(i => (i+1)%cards.length);}}>Skip →</button></div></div> : <div className="empty">No cards match this filter. Turn off “Needs more review” or choose another topic.</div>}
         </div>}
 
-        {tab === 'practice' && (!quiz || quiz.mode !== 'practice') && <div className="content"><div className="page-head"><div className="eyebrow">LOW PRESSURE · IMMEDIATE FEEDBACK</div><h1>Topic practice</h1><p>Answer questions from any topic, including multi-select and True/False items from your PDF.</p></div><div className="setup-card"><h2>Build your practice set</h2><div className="filters"><label>Exam domain<select value={domain} onChange={e => setFilters(e.target.value)}><option>All domains</option>{domains.map(x => <option key={x}>{x}</option>)}</select></label><label>Subtopic<select value={topic} onChange={e => setFilters(domain,e.target.value)}><option>All topics</option>{topics.map(x => <option key={x}>{x}</option>)}</select></label><label>Questions<select value={practiceSize} onChange={e => setPracticeSize(Number(e.target.value))}>{[10,20,30,50].map(n => <option value={n} key={n}>{n}</option>)}</select></label></div><div className="setup-summary"><div><strong>{filtered.length}</strong> questions available for this selection</div><span>Answers are revealed after each question</span></div><button className="btn btn-primary large" disabled={!filtered.length} onClick={() => startQuiz('practice')}>Start practice →</button></div></div>}
+        {tab === 'practice' && (!quiz || quiz.mode !== 'practice') && <div className="content"><div className="page-head"><div className="eyebrow">LOW PRESSURE · IMMEDIATE FEEDBACK</div><h1>Topic practice</h1><p>Answer questions from any topic, including multi-select and True/False items from your PDF.</p></div><div className="setup-card"><h2>Build your practice set</h2><div className="filters"><label>Exam domain<select value={domain} onChange={e => setFilters(e.target.value)}><option>All domains</option>{domains.map(x => <option key={x}>{x}</option>)}</select></label><label>Subtopic<select value={topic} onChange={e => setFilters(domain,e.target.value)}><option>All topics</option>{topics.map(x => <option key={x}>{x}</option>)}</select></label><label>Questions<select value={practiceSize} onChange={e => setPracticeSize(Number(e.target.value))}>{[10,20,30,50].map(n => <option value={n} key={n}>{n}</option>)}</select></label></div>{extraFilters}<div className="setup-summary"><div><strong>{filtered.length}</strong> questions available for this selection</div><span>Answers are revealed after each question</span></div><button className="btn btn-primary large" disabled={!filtered.length} onClick={() => startQuiz('practice')}>Start practice →</button></div></div>}
 
         {tab === 'exam' && (!quiz || quiz.mode !== 'exam') && <div className="content"><div className="page-head"><div className="eyebrow">EXAM CONDITIONS</div><h1>Full mock exam</h1><p>A timed simulation designed around the format you supplied from Datadog&apos;s exam guide.</p></div><div className="exam-intro"><div className="exam-intro-top"><span className="exam-icon">◷</span><span className="badge">EXAM SIMULATION</span></div><h2>Ready to test yourself?</h2><div className="exam-metrics"><div><b>90</b><span>questions</span></div><div><b>120</b><span>minutes</span></div><div><b>75</b><span>scored*</span></div><div><b>15</b><span>unscored*</span></div></div><p>Uses {eligibleExam.length} eligible, single-correct-answer multiple-choice questions from the PDF. No answers appear until you finish. You can skip, flag, and revisit questions.</p><div className="info-box">* The 15 unscored items are selected randomly by this app for practice. They are <strong>not</strong> Datadog&apos;s real pretest items, and this is not an official score prediction.</div><button className="btn btn-primary large" disabled={eligibleExam.length < 90} onClick={() => startQuiz('exam')}>Begin 90-question mock →</button></div></div>}
 
         {quiz && !quiz.finished && ((quiz.mode === 'exam' && tab === 'exam') || (quiz.mode === 'practice' && tab === 'practice')) && quizQ && <div className="content quiz-content"><div className="quiz-top"><div><div className="eyebrow">{quiz.mode === 'exam' ? 'TIMED MOCK EXAM' : 'TOPIC PRACTICE'}</div><h1>Question {quiz.index+1} <span className="subdued">/ {quiz.ids.length}</span></h1></div><div className="quiz-top-actions"><button className="btn btn-outline nav-toggle" onClick={() => setNavOpen(true)}>▦ {quiz.index+1}/{quiz.ids.length}</button>{quiz.mode === 'exam' && <div className={`countdown ${timer < 600 ? 'countdown-low' : ''}`}>◷ {formatTime(timer)}</div>}</div></div><div className="quiz-meter"><div style={{ width: `${percent(quiz.index+1,quiz.ids.length)}%` }} /></div><div className="quiz-columns"><div className="question-box"><div className="question-top"><TopicTags q={quizQ} /><span className="pill">{label(quizQ)}</span></div><div className="question-sub">{quizQ.topic} • Source Q{quizQ.id}</div><h2>{quizQ.prompt}</h2><div className="answer-options">{quizQ.options.map(o => {
                   const chosen = selection.includes(o.key);const correct = isChecked && quizQ.answers.includes(o.key);
                   return <button key={o.key} disabled={!!isChecked} className={`answer-option ${chosen ? 'selected' : ''} ${correct ? 'correct' : ''} ${isChecked && chosen && !correct ? 'incorrect' : ''}`} onClick={() => updateChoice(o.key)}><span className="option-letter">{o.key}</span><span>{o.text}</span><span className="option-indicator">{chosen ? '✓' : ''}</span></button>;
-                })}</div>{isChecked && <div className={`feedback ${matches(selection,quizQ.answers) ? 'good' : 'bad'}`}><b>{matches(selection,quizQ.answers) ? '✓ Correct answer' : '✕ Not quite'}</b><p>Source key: {answerDisplay(quizQ)}</p>{quizQ.flags.length>0 && <p className="flag-warning">⚠ Answer key issue: {quizQ.flags.join(', ')}</p>}</div>}
+                })}</div>{isChecked && <div className={`feedback ${matches(selection,quizQ.answers) ? 'good' : 'bad'}`}><b>{matches(selection,quizQ.answers) ? '✓ Correct answer' : '✕ Not quite'}</b><p>Source key: {answerDisplay(quizQ)}</p>{quizQ.explanation && <p>{quizQ.explanation}</p>}{quizQ.flags.length>0 && <p className="flag-warning">⚠ Answer key issue: {quizQ.flags.join(', ')}</p>}</div>}
                 <div className="quiz-actions"><button className="btn btn-outline" disabled={quiz.index===0} onClick={() => setQuiz(q => q ? {...q,index:q.index-1}:q)}>← Previous</button><div className="action-end">{quiz.mode === 'exam' && <button className="btn btn-outline" onClick={() => setQuiz(q => q ? {...q,flagged:q.flagged.includes(quizQ.id)?q.flagged.filter(x=>x!==quizQ.id):[...q.flagged,quizQ.id]}:q)}>{quiz.flagged.includes(quizQ.id)?'⚑ Flagged':'⚑ Flag for review'}</button>}{quiz.mode === 'practice' && !isChecked && <button className="btn btn-primary" disabled={!selection.length} onClick={() => { setQuiz(q => q ? {...q,checked:[...q.checked,quizQ.id]}:q); setProgress(p => { const results = [{ id: quizQ.id, correct: matches(selection, quizQ.answers) }]; return applyAnswers(recordProgressAnswers(p, results), results); }); }}>Check answer</button>}{(quiz.mode==='exam'||isChecked) && (quiz.index+1 < quiz.ids.length ? <button className="btn btn-primary" onClick={() => setQuiz(q => q?{...q,index:q.index+1}:q)}>Next question →</button> : <button className="btn btn-primary" onClick={() => {if (window.confirm('Finish and score this session now?')) finishQuiz();}}>Finish & score →</button>)}</div></div>
               </div>{navOpen && <div className="sheet-backdrop" onClick={() => setNavOpen(false)} />}<div className={`question-sidebar ${navOpen ? 'sheet-open' : ''}`}><div className="sheet-handle" /><h3>Question navigator</h3><p>{Object.values(quiz.selections).filter(a=>a.length).length} answered · {quiz.ids.length} total</p><div className="number-grid">{quiz.ids.map((id,i)=><button key={id} title={`Question ${i+1}`} className={`${i===quiz.index?'current':''} ${quiz.selections[id]?.length?'answered':''} ${quiz.flagged.includes(id)?'flagged':''}`} onClick={() => { setQuiz(q=>q?{...q,index:i}:q); setNavOpen(false); }}>{i+1}</button>)}</div><div className="nav-legend"><span><i className="leg-answered"/> Answered</span><span><i className="leg-flagged"/> Flagged</span></div><button className="btn btn-outline finish" onClick={() => { if (window.confirm('Finish and score your session now?')) finishQuiz(); }}>Finish & score</button></div></div></div>}
 

@@ -1,3 +1,9 @@
+export type QuestionRow = {
+  id: number; category_code: string; set_id: number | null; prompt: string;
+  options: Json; answers: string[]; type: string; difficulty: string; status: string;
+  explanation: string; source: string; source_page: number; flags: string[];
+  revision: number; updated_at: string;
+};
 export type Json =
   | string
   | number
@@ -14,6 +20,24 @@ export type Database = {
   }
   public: {
     Tables: {
+      question_categories: {
+        Row: { code: string; domain: string; topic: string }
+        Insert: { code: string; domain: string; topic: string }
+        Update: { code?: string; domain?: string; topic?: string }
+        Relationships: []
+      }
+      question_sets: {
+        Row: { id: number; name: string; default_difficulty: string }
+        Insert: { id?: number; name: string; default_difficulty?: string }
+        Update: { name?: string; default_difficulty?: string }
+        Relationships: []
+      }
+      questions: {
+        Row: QuestionRow
+        Insert: Omit<QuestionRow, 'id' | 'revision' | 'updated_at'> & { id?: number; revision?: number; updated_at?: string }
+        Update: Partial<Omit<QuestionRow, 'id'>>
+        Relationships: []
+      }
       profiles: {
         Row: {
           avatar_url: string
@@ -58,7 +82,7 @@ export type Database = {
       [_ in never]: never
     }
     Functions: {
-      can_study: { Args: never; Returns: boolean }
+      set_question_set_difficulty: { Args: { target_set: number; new_difficulty: string }; Returns: undefined }
       save_study_progress: {
         Args: { expected_revision: number; payload: Json }
         Returns: number

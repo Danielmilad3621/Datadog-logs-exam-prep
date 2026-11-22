@@ -273,3 +273,53 @@ button.tag:hover{border-color:currentColor}
   .bottom-nav .count{position:absolute;top:4px;right:calc(50% - 20px);min-width:17px;height:17px;padding:0 4px;border-radius:99px;background:var(--destructive);color:var(--destructive-foreground);font-size:10px;font-style:normal;display:grid;place-items:center}
   .status{display:none}
 }
+
+/* Question library */
+.manager { max-width: 1200px; margin: 0 auto; padding: 32px 24px 80px; }
+.manager h1 { font-size: clamp(1.8rem,4vw,2.8rem); }
+.manager-heading, .manager-tabs, .manager-actions, .manager-summary { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+.manager-heading { margin-bottom: 20px; }
+.manager-tabs, .manager-actions, .manager-summary { justify-content: flex-start; }
+.manager-tabs { margin: 24px 0; }
+.manager-summary { gap: 28px; color: var(--muted-foreground); }
+.manager-summary b { color: var(--foreground); }
+.manager-form { display: flex; flex-direction: column; gap: 18px; }
+.manager label, .manager-search label { display: flex; flex-direction: column; gap: 7px; font-size: .88rem; font-weight: 600; }
+.manager input:not([type=checkbox]), .manager select, .manager textarea { width: 100%; border: 1px solid var(--border); border-radius: 8px; padding: 10px 12px; background: var(--background); color: var(--foreground); font: inherit; font-weight: 400; }
+.manager textarea { min-height: 90px; resize: vertical; }
+.manager small { color: var(--muted-foreground); font-weight: 400; }
+.manager-grid, .manager-organize { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 18px; }
+.manager-organize { align-items: start; }
+.manager-search { display: flex; flex: 1; gap: 12px; align-items: end; }
+.manager-search label:first-child { flex: 1; }
+.manager fieldset { border: 1px solid var(--border); border-radius: 12px; padding: 16px; }
+.manager legend { padding: 0 8px; font-size: .9rem; }
+.manager-option { display: flex; align-items: center; gap: 12px; margin: 10px 0; }
+.manager .manager-correct { flex-direction: row; align-items: center; gap: 8px; }
+.manager input[type=checkbox] { width: 18px; height: 18px; accent-color: var(--primary); }
+.manager-list { border: 1px solid var(--border); border-radius: 16px; overflow: hidden; margin-top: 12px; }
+.manager-row { display: grid; grid-template-columns: 1fr auto; gap: 16px; padding: 22px; background: var(--card); border-bottom: 1px solid var(--border); }
+.manager-row:last-child { border-bottom: 0; }
+.manager-row h3 { font-weight: 600; margin: 10px 0 6px; line-height: 1.5; }
+.manager-row p { color: var(--muted-foreground); font-size: .85rem; }
+.manager-preview { grid-column: 1/-1; padding: 18px; border-radius: 10px; background: var(--muted); }
+.manager-preview li { padding: 6px 0; }
+.manager-error, .manager-success { border: 1px solid var(--border); border-radius: 10px; padding: 16px; margin: 16px 0; }
+.manager-error { color: var(--destructive); border-color: var(--destructive); }
+.manager-success { background: var(--muted); }
+.manager .manager-import { min-height: 200px; font-family: monospace; font-size: .8rem; }
+.manager-import-preview { max-height: 480px; overflow: auto; border: 1px solid var(--border); border-radius: 10px; padding: 16px; }
+.manager-import-preview > div { padding: 14px 0; border-bottom: 1px solid var(--border); }
+.manager-import-preview li { font-size: .85rem; margin: 6px 0; }
+.manager-set { border-top: 1px solid var(--border); padding-top: 20px; display: flex; flex-direction: column; gap: 10px; }
+.manager-category-list { max-height: 500px; overflow: auto; font-size: .85rem; }
+.manager-category-list p { padding: 10px 0; border-top: 1px solid var(--border); }
+.extra-filters { padding-top: 8px; }
+.manage-link { white-space: nowrap; font-size: .75rem; }
+@media(max-width:700px) {
+  .manager { padding: 20px 14px 50px; }
+  .manager-grid, .manager-organize, .manager-row { grid-template-columns: 1fr; }
+  .manager-search { flex-wrap: wrap; min-width: 100%; }
+  .manager-tabs .btn { padding: 9px 12px; font-size: .8rem; }
+  .manage-link { padding: 6px 8px; font-size: .65rem; }
+}

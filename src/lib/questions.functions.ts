@@ -1,12 +1,7 @@
-import { createServerFn } from "@tanstack/react-start";
-import type { Question } from "@/lib/question-types";
+import { createServerFn } from '@tanstack/react-start';
 import { requireSupabaseAuth } from '@/integrations/supabase/auth-middleware';
-import { isStudyAccount } from './study-access';
+import { readQuestionBank } from './question-bank.functions';
 
-// The question bank is returned only after validating the personal Google account.
-export const getQuestions = createServerFn({ method: "GET" }).middleware([requireSupabaseAuth]).handler(async ({ context }) => {
-  const { data, error } = await context.supabase.auth.getUser();
-  if (error || !isStudyAccount(data.user)) throw new Error('This study space is restricted to your Google account.');
-  const bank = (await import("@/data/questions.json")).default;
-  return bank as Question[];
-});
+// The database is the live source; JSON is retained only as the original seed/export.
+export const getQuestions = createServerFn({ method: 'GET' }).middleware([requireSupabaseAuth])
+  .handler(async ({ context }) => (await readQuestionBank(context.supabase, false)).questions);
