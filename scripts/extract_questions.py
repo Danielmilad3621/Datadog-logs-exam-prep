@@ -66,10 +66,12 @@ for k,m in enumerate(question_re):
                  'flags':problem})
     if problem:issues.append({'id':qid,'flags':problem,'text':prompt})
 if sorted(q['id'] for q in full)!=list(range(1,211)):raise AssertionError('missing questions')
-path=root/'server'/'questions.json';path.write_text(json.dumps(full,ensure_ascii=False,indent=2),encoding='utf-8')
+output_dir=root/'src'/'data'
+output_dir.mkdir(parents=True, exist_ok=True)
+path=output_dir/'questions.json';path.write_text(json.dumps(full,ensure_ascii=False,indent=2),encoding='utf-8')
 from collections import Counter
 print('Extracted',len(full),'questions; types',dict(Counter(q['type'] for q in full)))
 print('Question issues:',len(issues));print(json.dumps(issues,indent=2))
 print('Main domain counts',dict(Counter(q['domain'] for q in full)))
 print('Question bank JSON:',path)
-(root/'server'/'extraction-report.json').write_text(json.dumps({'total':len(full),'typeCounts':dict(Counter(q['type'] for q in full)),'issues':issues,'domainCounts':dict(Counter(q['domain'] for q in full))},indent=2))
+(output_dir/'extraction-report.json').write_text(json.dumps({'total':len(full),'typeCounts':dict(Counter(q['type'] for q in full)),'issues':issues,'domainCounts':dict(Counter(q['domain'] for q in full))},indent=2))
