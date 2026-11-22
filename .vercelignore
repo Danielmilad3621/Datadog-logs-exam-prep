@@ -1,0 +1,12 @@
+node_modules
+.env
+.env.*
+!.env.example
+.output*
+.wrangler
+work
+*.log
+database
+
+supabase/.temp
+supabase/.branches

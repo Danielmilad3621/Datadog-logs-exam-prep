@@ -1,115 +1,93 @@
-# Datadog Log Lab — private study application
+# Log Lab Exam Compass
 
-A Windows-friendly Next.js study app built from the **user-provided 52-page PDF** (210 numbered questions). This is a third-party question bank, **not** an official Datadog product or exam.
+Independent Datadog study app using TanStack Start, Vercel, and Supabase.
+Includes 210 questions, flashcards, topic practice, timed mocks, mistakes review, and synced progress.
+This is a third-party study aid, not an official Datadog product.
 
-## Contents
-
-- **210 flashcards**, with source question, original choices, the PDF's answer key, and page number.
-- **Topic practice:** select official guide domain + subtopic and practice 10/20/30/50 questions. Supports single-answer, multiple-answer and true/false content from the PDF.
-- **Full mock:** 90 single-answer multiple-choice questions, 120-minute countdown, question navigation, flags, no immediate feedback.
-- **Simulated scoring:** select 75 of the 90 questions at random to count, with 15 designated as simulated pretest. These are NOT real Datadog pretest items, and the score is NOT a pass prediction.
-- **Local progress:** browser storage, flashcard ratings, past practice/mocks; export/import progress for manual cross-device transfer.
-- **Basic Auth gate:** hosted site requires one shared password (`STUDY_PASSWORD`), username `student`. There is no automatic multi-device sync.
-
-## Extracted question counts
-
-- 210 total
-- 118 single-answer multiple-choice (eligible for mock)
-- 51 multiple-answer
-- 41 true/false
-- One answer-key inconsistency: **Question 149** says choose two, but lists three correct answers. This item is flagged rather than silently corrected.
-
-The questions are tagged to the domains/subtopics quoted from the Datadog prep guide, as a *study classification*. Official exam weightings and pass mark are not known from this bank. Some parts of the bank might be obsolete or incorrect; verify against https://docs.datadoghq.com/logs/.
-
-## Windows setup with PowerShell
-
-1. Install **Node.js 20.9+** (latest LTS recommended): https://nodejs.org/en/download
-2. Unzip the project on your Desktop. Rename the extracted folder to `datadog-log-lab` if necessary.
-3. Open PowerShell and run:
-
+## Development
+Install Node.js 24 LTS, then:
 ```powershell
-cd "$env:USERPROFILE\Desktop\datadog-log-lab"
-node --version
-npm --version
-npm install
-npm run dev
+npm.cmd ci
+npm.cmd run dev
+```
+Open http://127.0.0.1:5184. Copy .env.example to .env and fill in the Supabase public connection settings.
+Google sign-in is restricted to the confirmed account danielmilad3621@gmail.com.
+Allow http://127.0.0.1:5184/auth in Supabase Authentication URL Configuration for local login.
+
+## Validation
+```powershell
+npm.cmd test
+npx.cmd tsc --noEmit
+npm.cmd run build
 ```
 
-4. Open http://localhost:3000. On your laptop, development does not require a password when `STUDY_PASSWORD` is unset.
-5. Stop the development server with `Ctrl+C`.
+## Hosting and database
+Vercel builds the frontend and private server functions using Nitro's Vercel preset.
+Set VITE_SUPABASE_URL, VITE_SUPABASE_PUBLISHABLE_KEY, SUPABASE_URL, and SUPABASE_PUBLISHABLE_KEY in Vercel.
+Only public/publishable keys are used. No service-role key is needed by the application.
 
-## Deploy to YOUR Vercel account (no GitHub required)
+Question-bank migration: supabase/migrations/20261122000100_question_bank.sql.
+The existing profiles, study_progress, and progress-sync functions are preserved.
+Public tables: profiles and study_progress, protected by row-level security and verified Google identity.
+Save operations check the revision number; conflicts require an explicit choice.
+Private migration data is attached to the allowed account on its first sign-in.
+The question bank stays in src/data and is served only after server-side account validation.
 
-1. From PowerShell in the project folder:
+Progress is synced across devices; an in-progress quiz is recovered only in its current browser.
+Progress > Export progress and Import progress provide manual backups.
 
-```powershell
-npm install -g vercel
-vercel login
-vercel
-```
+## Branding
+The app uses its own Log Lab SVG icon, with no external builder SDK, telemetry, images or badges.
 
-2. Follow the prompts to choose your Vercel account, create/link a project and select the project root. This produces a preview deployment.
-3. Open **Vercel Dashboard → Project → Settings → Environment Variables**. Set:
-
-   | Name | Value | Environment |
-   | --- | --- | --- |
-   | `STUDY_PASSWORD` | a long, unique password you choose | Preview + Production |
-
-4. Redeploy after changing environment variables:
-
-```powershell
-vercel --prod
-```
-
-5. Open your generated `.vercel.app` URL. Your browser should ask for username/password. Username is `student`; password is your `STUDY_PASSWORD`.
-6. If you see status 503, the password is missing from the deployed environment or the deployment wasn't rebuilt after setting it. If you see status 401, the username/password does not match.
-
-**Do not put your password in the code, commit it to GitHub, or prefix it with `NEXT_PUBLIC_`.** This is a lightweight single-user Basic Auth gate. For multi-user access, use a proper account system (e.g. Auth.js) and a database.
-
-## Alternative GitHub-based continuous deployment
-
-1. Create a **private** GitHub repository named `datadog-log-lab`.
-2. Install Git for Windows, then in the project root:
-
-```powershell
-git init
-git add .
-git commit -m "Initial private study app"
-git branch -M main
-git remote add origin https://github.com/YOUR_USERNAME/datadog-log-lab.git
-git push -u origin main
-```
-
-3. In Vercel, choose **Add New → Project**, import your private repository. It should detect Next.js.
-4. Add `STUDY_PASSWORD` to the Vercel project environment variables. Deploy. Every future push to `main` redeploys automatically.
-
-## Privacy and limitations
-
-- The imported question bank is stored in **`server/questions.json`** (not under `public/`) and delivered only via a password-gated rendered page. The app must be deployed with `STUDY_PASSWORD` in production.
-- A **private GitHub repository alone does NOT make a Vercel website private**. The included access gate is important.
-- The app stores results locally in the browser. Different devices will have different progress until you export/import manually.
-- Vercel does not retain browser `localStorage`, so this MVP does not need a database. If you clear site data, you can lose progress. Export backups periodically.
-- The app doesn't use your VPS. Later, Supabase (or a small Postgres database on your existing VPS) can provide private automatic sync and accounts.
-- Respect the rights of the publisher whose PDF you uploaded. Keep the app for your personal study; do not redistribute the questions publicly.
-
-## Adjusting questions and source content
-
-- Edit `server/questions.json` to fix typos, correct an answer key **after independent verification**, or revise its `domain` / `topic` field.
-- See `server/extraction-report.json` for validation issues.
-- To re-extract from another copy of the supplied PDF, install PyMuPDF with Python and run:
-
+## Extracting questions
 ```powershell
 python -m pip install pymupdf
-python scripts/extract_questions.py "C:\path\to\source.pdf"
+python scripts/extract_questions.py 'C:/path/to/source.pdf'
 ```
+The extractor expects 210 numbered questions and writes to src/data.
+Question 149 preserves the source answer-key inconsistency warning.
 
-Use the same PDF structure; the script intentionally expects exactly 210 numbered questions.
+## Managing questions
 
-## Official references
+Sign in with the existing allowed Google account, then choose **Manage questions**.
 
-- Next.js for Windows: https://nextjs.org/docs/app/getting-started/installation
-- Next.js Proxy authentication gate: https://nextjs.org/docs/app/api-reference/file-conventions/proxy
-- Vercel deployment: https://vercel.com/docs/deployments
-- Vercel environment variables: https://vercel.com/docs/environment-variables
-- Datadog certification and exam info: https://www.datadoghq.com/certification/overview/
-- Datadog logging documentation: https://docs.datadoghq.com/logs/
+- **Questions:** add a draft or edit a question, choose its category/set/difficulty, provide its answer and optional explanation/source, then publish it.
+- **Import a set:** download the CSV template, create a question set, choose defaults, upload/paste CSV or JSON, validate and review every row, then save drafts. Imports never overwrite existing question IDs.
+- **Categories & sets:** add categories or sets, apply a difficulty to all questions in a set, and publish reviewed drafts together.
+- **Export bank:** download the current library as JSON. Supabase is the live source of truth; src/data/questions.json is only the original seed.
+- **Study:** filter flashcards/topic practice by category, set or difficulty. “Hard for me” is a separate personal flag synced with progress. Full mocks keep the existing 90-question format.
+- Archive a published question to keep its history while excluding it from new practice. Published questions cannot be reverted to drafts.
+- In-progress quizzes retain their question/answer snapshots, so later edits do not change their scoring.
+
+### Import format
+
+CSV headers: prompt,type,optionA,optionB,optionC,answers,categoryCode,difficulty,explanation,source,sourcePage.
+Use A|B for multiple correct answers. Quote CSV cells containing commas or newlines.
+JSON accepts an array or an exported bank with a questions array. Categories may use categoryCode or the original topicCode.
+Question type is single, multi, or truefalse. Difficulty is unrated, easy, medium, or hard.
+Defaults fill missing category/difficulty values; the selected set applies to the whole import.
+All imports start as drafts. Files are limited to 10 MB / 500 questions per import.
+Repeated question text is rejected; the two original repeated prompts are preserved for existing progress.
+
+### Initial database setup
+
+Run npx supabase db push --remote=frkxihaebhzwozoxxocn --dry-run, review the plan, then apply with --yes.
+The recovered 20261107221505 baseline matches existing migration history and is not reapplied.
+The new migration is supabase/migrations/20261122000100_question_bank.sql.
+It creates only the question-bank tables/functions, seeds the original 210 IDs, and reuses the existing private.can_study() authorization predicate.
+It does not reset or rewrite study progress. Keep a database backup before future migrations.
+Do not run this initial migration a second time on the same database.
+
+### Code changes and Vercel
+
+The GitHub main branch is connected to the Vercel project log-lab-exam-compass.
+Push code changes through a branch/PR. Vercel builds the app and runs unit tests and TypeScript checks before making a deployment ready.
+Question content changes are saved directly to Supabase and appear when the study page reloads; they do not require a Git commit or deployment.
+
+Validation:
+- npm ci
+- npm run check
+- npm run build
+- python3 scripts/test-question-migration.py (requires the disposable log-lab-bank-test PostgreSQL Docker container)
+
+Use the same project URL/key on the server and frontend. Never commit .env files, access tokens, or user progress exports.

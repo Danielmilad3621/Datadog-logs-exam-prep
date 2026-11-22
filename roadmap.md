@@ -1,0 +1,4 @@
+- [x] Independent build and hosting configuration
+- [x] Google account restrictions and database policies
+- [x] Cloud progress import prepared
+- [ ] Verify Google OAuth and cross-device sync on the deployed URL

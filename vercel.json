@@ -1,0 +1,8 @@
+{
+  "framework": "tanstack-start",
+  "buildCommand": "npm run build && npm run check",
+  "installCommand": "npm ci",
+  "regions": [
+    "fra1"
+  ]
+}

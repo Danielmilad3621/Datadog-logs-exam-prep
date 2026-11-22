@@ -5,3 +5,12 @@ node_modules/
 .vercel/
 *.tsbuildinfo
 .DS_Store
+
+.output/
+.nitro/
+.tanstack/
+dist/
+coverage/
+
+supabase/.temp/
+supabase/.branches/
